@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Software Rede Hotelaria/1.0.0": {
+        "runtime": {
+          "Software Rede Hotelaria.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Software Rede Hotelaria/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
