@@ -10,7 +10,7 @@ namespace PIMIII
     class Conectar
     {
 
-        string localCon = "a";
+        string localCon = "Data Source=DESKTOP-GUPK5EL\\SQLEXPRESS;Initial Catalog=HotelVallhala;Integrated Security=True";
 
     }
 }
