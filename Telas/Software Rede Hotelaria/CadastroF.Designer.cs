@@ -42,19 +42,19 @@ namespace Software_Rede_Hotelaria
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.TxtNome = new System.Windows.Forms.TextBox();
+            this.TxtCpf = new System.Windows.Forms.TextBox();
+            this.TxtRg = new System.Windows.Forms.TextBox();
+            this.TxtSexo = new System.Windows.Forms.TextBox();
+            this.TxtEstC = new System.Windows.Forms.TextBox();
+            this.TxtEmail = new System.Windows.Forms.TextBox();
+            this.TxtTelefone = new System.Windows.Forms.TextBox();
+            this.TxtEstado = new System.Windows.Forms.TextBox();
+            this.TxtCidade = new System.Windows.Forms.TextBox();
+            this.TxtRua = new System.Windows.Forms.TextBox();
+            this.TxtNum = new System.Windows.Forms.TextBox();
+            this.TxtSal = new System.Windows.Forms.TextBox();
+            this.TxtCargo = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -186,99 +186,99 @@ namespace Software_Rede_Hotelaria
             this.label13.Text = "Cargo: ";
             this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
-            // textBox1
+            // TxtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(112, 95);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(268, 23);
-            this.textBox1.TabIndex = 13;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.TxtNome.Location = new System.Drawing.Point(112, 95);
+            this.TxtNome.Name = "TxtNome";
+            this.TxtNome.Size = new System.Drawing.Size(268, 23);
+            this.TxtNome.TabIndex = 13;
+            this.TxtNome.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // TxtCpf
             // 
-            this.textBox2.Location = new System.Drawing.Point(112, 142);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(268, 23);
-            this.textBox2.TabIndex = 14;
+            this.TxtCpf.Location = new System.Drawing.Point(112, 142);
+            this.TxtCpf.Name = "TxtCpf";
+            this.TxtCpf.Size = new System.Drawing.Size(268, 23);
+            this.TxtCpf.TabIndex = 14;
             // 
-            // textBox3
+            // TxtRg
             // 
-            this.textBox3.Location = new System.Drawing.Point(112, 180);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(268, 23);
-            this.textBox3.TabIndex = 15;
+            this.TxtRg.Location = new System.Drawing.Point(112, 180);
+            this.TxtRg.Name = "TxtRg";
+            this.TxtRg.Size = new System.Drawing.Size(268, 23);
+            this.TxtRg.TabIndex = 15;
             // 
-            // textBox4
+            // TxtSexo
             // 
-            this.textBox4.Location = new System.Drawing.Point(112, 225);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(268, 23);
-            this.textBox4.TabIndex = 16;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.TxtSexo.Location = new System.Drawing.Point(112, 225);
+            this.TxtSexo.Name = "TxtSexo";
+            this.TxtSexo.Size = new System.Drawing.Size(268, 23);
+            this.TxtSexo.TabIndex = 16;
+            this.TxtSexo.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // textBox5
+            // TxtEstC
             // 
-            this.textBox5.Location = new System.Drawing.Point(112, 265);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(268, 23);
-            this.textBox5.TabIndex = 17;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.TxtEstC.Location = new System.Drawing.Point(112, 265);
+            this.TxtEstC.Name = "TxtEstC";
+            this.TxtEstC.Size = new System.Drawing.Size(268, 23);
+            this.TxtEstC.TabIndex = 17;
+            this.TxtEstC.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
-            // textBox6
+            // TxtEmail
             // 
-            this.textBox6.Location = new System.Drawing.Point(112, 309);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(268, 23);
-            this.textBox6.TabIndex = 18;
+            this.TxtEmail.Location = new System.Drawing.Point(112, 309);
+            this.TxtEmail.Name = "TxtEmail";
+            this.TxtEmail.Size = new System.Drawing.Size(268, 23);
+            this.TxtEmail.TabIndex = 18;
             // 
-            // textBox7
+            // TxtTelefone
             // 
-            this.textBox7.Location = new System.Drawing.Point(112, 344);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(268, 23);
-            this.textBox7.TabIndex = 19;
+            this.TxtTelefone.Location = new System.Drawing.Point(112, 344);
+            this.TxtTelefone.Name = "TxtTelefone";
+            this.TxtTelefone.Size = new System.Drawing.Size(268, 23);
+            this.TxtTelefone.TabIndex = 19;
             // 
-            // textBox8
+            // TxtEstado
             // 
-            this.textBox8.Location = new System.Drawing.Point(470, 95);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(268, 23);
-            this.textBox8.TabIndex = 20;
+            this.TxtEstado.Location = new System.Drawing.Point(470, 95);
+            this.TxtEstado.Name = "TxtEstado";
+            this.TxtEstado.Size = new System.Drawing.Size(268, 23);
+            this.TxtEstado.TabIndex = 20;
             // 
-            // textBox9
+            // TxtCidade
             // 
-            this.textBox9.Location = new System.Drawing.Point(470, 142);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(268, 23);
-            this.textBox9.TabIndex = 21;
+            this.TxtCidade.Location = new System.Drawing.Point(470, 142);
+            this.TxtCidade.Name = "TxtCidade";
+            this.TxtCidade.Size = new System.Drawing.Size(268, 23);
+            this.TxtCidade.TabIndex = 21;
             // 
-            // textBox10
+            // TxtRua
             // 
-            this.textBox10.Location = new System.Drawing.Point(470, 180);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(268, 23);
-            this.textBox10.TabIndex = 22;
+            this.TxtRua.Location = new System.Drawing.Point(470, 180);
+            this.TxtRua.Name = "TxtRua";
+            this.TxtRua.Size = new System.Drawing.Size(268, 23);
+            this.TxtRua.TabIndex = 22;
             // 
-            // textBox11
+            // TxtNum
             // 
-            this.textBox11.Location = new System.Drawing.Point(470, 225);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(268, 23);
-            this.textBox11.TabIndex = 23;
+            this.TxtNum.Location = new System.Drawing.Point(470, 225);
+            this.TxtNum.Name = "TxtNum";
+            this.TxtNum.Size = new System.Drawing.Size(268, 23);
+            this.TxtNum.TabIndex = 23;
             // 
-            // textBox12
+            // TxtSal
             // 
-            this.textBox12.Location = new System.Drawing.Point(470, 265);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(268, 23);
-            this.textBox12.TabIndex = 24;
+            this.TxtSal.Location = new System.Drawing.Point(470, 265);
+            this.TxtSal.Name = "TxtSal";
+            this.TxtSal.Size = new System.Drawing.Size(268, 23);
+            this.TxtSal.TabIndex = 24;
             // 
-            // textBox13
+            // TxtCargo
             // 
-            this.textBox13.Location = new System.Drawing.Point(470, 314);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(268, 23);
-            this.textBox13.TabIndex = 25;
+            this.TxtCargo.Location = new System.Drawing.Point(470, 314);
+            this.TxtCargo.Name = "TxtCargo";
+            this.TxtCargo.Size = new System.Drawing.Size(268, 23);
+            this.TxtCargo.TabIndex = 25;
             // 
             // pictureBox1
             // 
@@ -318,19 +318,19 @@ namespace Software_Rede_Hotelaria
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtCargo);
+            this.Controls.Add(this.TxtSal);
+            this.Controls.Add(this.TxtNum);
+            this.Controls.Add(this.TxtRua);
+            this.Controls.Add(this.TxtCidade);
+            this.Controls.Add(this.TxtEstado);
+            this.Controls.Add(this.TxtTelefone);
+            this.Controls.Add(this.TxtEmail);
+            this.Controls.Add(this.TxtEstC);
+            this.Controls.Add(this.TxtSexo);
+            this.Controls.Add(this.TxtRg);
+            this.Controls.Add(this.TxtCpf);
+            this.Controls.Add(this.TxtNome);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -387,5 +387,18 @@ namespace Software_Rede_Hotelaria
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox TxtNome;
+        private System.Windows.Forms.TextBox TxtCpf;
+        private System.Windows.Forms.TextBox TxtRg;
+        private System.Windows.Forms.TextBox TxtSexo;
+        private System.Windows.Forms.TextBox TxtEstC;
+        private System.Windows.Forms.TextBox TxtEmail;
+        private System.Windows.Forms.TextBox TxtTelefone;
+        private System.Windows.Forms.TextBox TxtEstado;
+        private System.Windows.Forms.TextBox TxtCidade;
+        private System.Windows.Forms.TextBox TxtRua;
+        private System.Windows.Forms.TextBox TxtNum;
+        private System.Windows.Forms.TextBox TxtSal;
+        private System.Windows.Forms.TextBox TxtCargo;
     }
 }

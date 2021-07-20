@@ -39,9 +39,14 @@ namespace PIMIII
             this.menuVertical = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
             this.painelTela = new System.Windows.Forms.Panel();
-            this.txtComplemento = new System.Windows.Forms.TextBox();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtBairro = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.bntEnviar = new System.Windows.Forms.Button();
+            this.txtNumero = new System.Windows.Forms.TextBox();
             this.txtRua = new System.Windows.Forms.TextBox();
+            this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.txtCpf = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,7 +55,6 @@ namespace PIMIII
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.bntEnviar = new System.Windows.Forms.Button();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -164,10 +168,14 @@ namespace PIMIII
             // painelTela
             // 
             this.painelTela.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.painelTela.Controls.Add(this.bntEnviar);
-            this.painelTela.Controls.Add(this.txtComplemento);
+            this.painelTela.Controls.Add(this.txtTelefone);
+            this.painelTela.Controls.Add(this.label9);
             this.painelTela.Controls.Add(this.txtBairro);
+            this.painelTela.Controls.Add(this.label8);
+            this.painelTela.Controls.Add(this.bntEnviar);
+            this.painelTela.Controls.Add(this.txtNumero);
             this.painelTela.Controls.Add(this.txtRua);
+            this.painelTela.Controls.Add(this.txtCidade);
             this.painelTela.Controls.Add(this.txtEstado);
             this.painelTela.Controls.Add(this.txtCpf);
             this.painelTela.Controls.Add(this.label7);
@@ -182,37 +190,81 @@ namespace PIMIII
             this.painelTela.Size = new System.Drawing.Size(1080, 615);
             this.painelTela.TabIndex = 2;
             // 
-            // txtComplemento
+            // txtTelefone
             // 
-            this.txtComplemento.Location = new System.Drawing.Point(90, 144);
-            this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(512, 20);
-            this.txtComplemento.TabIndex = 10;
+            this.txtTelefone.Location = new System.Drawing.Point(90, 144);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(512, 20);
+            this.txtTelefone.TabIndex = 15;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(6, 151);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 13);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Telefone";
             // 
             // txtBairro
             // 
-            this.txtBairro.Location = new System.Drawing.Point(90, 113);
+            this.txtBairro.Location = new System.Drawing.Point(90, 118);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(512, 20);
-            this.txtBairro.TabIndex = 9;
+            this.txtBairro.TabIndex = 13;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(6, 125);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(34, 13);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Bairro";
+            // 
+            // bntEnviar
+            // 
+            this.bntEnviar.Location = new System.Drawing.Point(21, 328);
+            this.bntEnviar.Name = "bntEnviar";
+            this.bntEnviar.Size = new System.Drawing.Size(82, 55);
+            this.bntEnviar.TabIndex = 11;
+            this.bntEnviar.Text = "Enviar";
+            this.bntEnviar.UseVisualStyleBackColor = true;
+            this.bntEnviar.Click += new System.EventHandler(this.bntEnviar_Click);
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Location = new System.Drawing.Point(90, 92);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(512, 20);
+            this.txtNumero.TabIndex = 10;
             // 
             // txtRua
             // 
-            this.txtRua.Location = new System.Drawing.Point(90, 82);
+            this.txtRua.Location = new System.Drawing.Point(90, 66);
             this.txtRua.Name = "txtRua";
             this.txtRua.Size = new System.Drawing.Size(512, 20);
-            this.txtRua.TabIndex = 8;
+            this.txtRua.TabIndex = 9;
+            // 
+            // txtCidade
+            // 
+            this.txtCidade.Location = new System.Drawing.Point(90, 39);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(512, 20);
+            this.txtCidade.TabIndex = 8;
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(90, 53);
+            this.txtEstado.Location = new System.Drawing.Point(90, 13);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(512, 20);
             this.txtEstado.TabIndex = 7;
             // 
             // txtCpf
             // 
-            this.txtCpf.Location = new System.Drawing.Point(90, 24);
+            this.txtCpf.Location = new System.Drawing.Point(90, 170);
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(512, 20);
             this.txtCpf.TabIndex = 6;
@@ -221,48 +273,47 @@ namespace PIMIII
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(6, 147);
+            this.label7.Location = new System.Drawing.Point(6, 99);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 13);
+            this.label7.Size = new System.Drawing.Size(44, 13);
             this.label7.TabIndex = 5;
-            this.label7.Text = "Complemento";
+            this.label7.Text = "Numero";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(6, 116);
+            this.label6.Location = new System.Drawing.Point(6, 69);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 13);
+            this.label6.Size = new System.Drawing.Size(27, 13);
             this.label6.TabIndex = 4;
-            this.label6.Text = "Bairro";
+            this.label6.Text = "Rua";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(6, 85);
+            this.label5.Location = new System.Drawing.Point(6, 42);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 13);
+            this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Rua";
+            this.label5.Text = "Cidade";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(6, 56);
+            this.label4.Location = new System.Drawing.Point(6, 16);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.Size = new System.Drawing.Size(18, 13);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Estado";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.label4.Text = "Uf";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(6, 27);
+            this.label3.Location = new System.Drawing.Point(3, 177);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 13);
             this.label3.TabIndex = 1;
@@ -271,21 +322,10 @@ namespace PIMIII
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(138, 85);
+            this.label1.Location = new System.Drawing.Point(138, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 0;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // bntEnviar
-            // 
-            this.bntEnviar.Location = new System.Drawing.Point(308, 192);
-            this.bntEnviar.Name = "bntEnviar";
-            this.bntEnviar.Size = new System.Drawing.Size(82, 55);
-            this.bntEnviar.TabIndex = 11;
-            this.bntEnviar.Text = "Enviar";
-            this.bntEnviar.UseVisualStyleBackColor = true;
-            this.bntEnviar.Click += new System.EventHandler(this.bntEnviar_Click);
             // 
             // Form1
             // 
@@ -323,9 +363,9 @@ namespace PIMIII
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtComplemento;
-        private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.TextBox txtRua;
+        private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.Label label7;
@@ -334,6 +374,10 @@ namespace PIMIII
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button bntEnviar;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.TextBox txtTelefone;
+        private System.Windows.Forms.Label label9;
     }
 }
 
