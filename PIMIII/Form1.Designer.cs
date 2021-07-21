@@ -29,6 +29,14 @@ namespace PIMIII
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label cpf_gerenteLabel;
+            System.Windows.Forms.Label hotel_bairroLabel;
+            System.Windows.Forms.Label hotel_cidadeLabel;
+            System.Windows.Forms.Label hotel_numerpoLabel;
+            System.Windows.Forms.Label hotel_ruaLabel;
+            System.Windows.Forms.Label hotel_telefoneLabel;
+            System.Windows.Forms.Label hotel_ufLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,22 +47,22 @@ namespace PIMIII
             this.menuVertical = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
             this.painelTela = new System.Windows.Forms.Panel();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtBairro = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.mtxtUf = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtRua = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtNumero = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtCidade = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtBairro = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtCpf = new System.Windows.Forms.MaskedTextBox();
             this.bntEnviar = new System.Windows.Forms.Button();
-            this.txtNumero = new System.Windows.Forms.TextBox();
-            this.txtRua = new System.Windows.Forms.TextBox();
-            this.txtCidade = new System.Windows.Forms.TextBox();
-            this.txtEstado = new System.Windows.Forms.TextBox();
-            this.txtCpf = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.hotelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            cpf_gerenteLabel = new System.Windows.Forms.Label();
+            hotel_bairroLabel = new System.Windows.Forms.Label();
+            hotel_cidadeLabel = new System.Windows.Forms.Label();
+            hotel_numerpoLabel = new System.Windows.Forms.Label();
+            hotel_ruaLabel = new System.Windows.Forms.Label();
+            hotel_telefoneLabel = new System.Windows.Forms.Label();
+            hotel_ufLabel = new System.Windows.Forms.Label();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -62,7 +70,71 @@ namespace PIMIII
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).BeginInit();
             this.menuVertical.SuspendLayout();
             this.painelTela.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // cpf_gerenteLabel
+            // 
+            cpf_gerenteLabel.AutoSize = true;
+            cpf_gerenteLabel.Location = new System.Drawing.Point(18, 42);
+            cpf_gerenteLabel.Name = "cpf_gerenteLabel";
+            cpf_gerenteLabel.Size = new System.Drawing.Size(64, 13);
+            cpf_gerenteLabel.TabIndex = 16;
+            cpf_gerenteLabel.Text = "cpf gerente:";
+            // 
+            // hotel_bairroLabel
+            // 
+            hotel_bairroLabel.AutoSize = true;
+            hotel_bairroLabel.Location = new System.Drawing.Point(18, 68);
+            hotel_bairroLabel.Name = "hotel_bairroLabel";
+            hotel_bairroLabel.Size = new System.Drawing.Size(62, 13);
+            hotel_bairroLabel.TabIndex = 18;
+            hotel_bairroLabel.Text = "hotel bairro:";
+            // 
+            // hotel_cidadeLabel
+            // 
+            hotel_cidadeLabel.AutoSize = true;
+            hotel_cidadeLabel.Location = new System.Drawing.Point(18, 94);
+            hotel_cidadeLabel.Name = "hotel_cidadeLabel";
+            hotel_cidadeLabel.Size = new System.Drawing.Size(68, 13);
+            hotel_cidadeLabel.TabIndex = 20;
+            hotel_cidadeLabel.Text = "hotel cidade:";
+            // 
+            // hotel_numerpoLabel
+            // 
+            hotel_numerpoLabel.AutoSize = true;
+            hotel_numerpoLabel.Location = new System.Drawing.Point(18, 120);
+            hotel_numerpoLabel.Name = "hotel_numerpoLabel";
+            hotel_numerpoLabel.Size = new System.Drawing.Size(71, 13);
+            hotel_numerpoLabel.TabIndex = 24;
+            hotel_numerpoLabel.Text = "hotel numero:";
+            // 
+            // hotel_ruaLabel
+            // 
+            hotel_ruaLabel.AutoSize = true;
+            hotel_ruaLabel.Location = new System.Drawing.Point(18, 146);
+            hotel_ruaLabel.Name = "hotel_ruaLabel";
+            hotel_ruaLabel.Size = new System.Drawing.Size(51, 13);
+            hotel_ruaLabel.TabIndex = 26;
+            hotel_ruaLabel.Text = "hotel rua:";
+            // 
+            // hotel_telefoneLabel
+            // 
+            hotel_telefoneLabel.AutoSize = true;
+            hotel_telefoneLabel.Location = new System.Drawing.Point(18, 172);
+            hotel_telefoneLabel.Name = "hotel_telefoneLabel";
+            hotel_telefoneLabel.Size = new System.Drawing.Size(74, 13);
+            hotel_telefoneLabel.TabIndex = 28;
+            hotel_telefoneLabel.Text = "hotel telefone:";
+            // 
+            // hotel_ufLabel
+            // 
+            hotel_ufLabel.AutoSize = true;
+            hotel_ufLabel.Location = new System.Drawing.Point(18, 198);
+            hotel_ufLabel.Name = "hotel_ufLabel";
+            hotel_ufLabel.Size = new System.Drawing.Size(45, 13);
+            hotel_ufLabel.TabIndex = 30;
+            hotel_ufLabel.Text = "hotel uf:";
             // 
             // barraTitulo
             // 
@@ -168,65 +240,86 @@ namespace PIMIII
             // painelTela
             // 
             this.painelTela.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.painelTela.Controls.Add(this.txtTelefone);
-            this.painelTela.Controls.Add(this.label9);
-            this.painelTela.Controls.Add(this.txtBairro);
-            this.painelTela.Controls.Add(this.label8);
+            this.painelTela.Controls.Add(this.mtxtUf);
+            this.painelTela.Controls.Add(this.mtxtTelefone);
+            this.painelTela.Controls.Add(this.mtxtRua);
+            this.painelTela.Controls.Add(this.mtxtNumero);
+            this.painelTela.Controls.Add(this.mtxtCidade);
+            this.painelTela.Controls.Add(this.mtxtBairro);
+            this.painelTela.Controls.Add(this.mtxtCpf);
+            this.painelTela.Controls.Add(cpf_gerenteLabel);
+            this.painelTela.Controls.Add(hotel_bairroLabel);
+            this.painelTela.Controls.Add(hotel_cidadeLabel);
+            this.painelTela.Controls.Add(hotel_numerpoLabel);
+            this.painelTela.Controls.Add(hotel_ruaLabel);
+            this.painelTela.Controls.Add(hotel_telefoneLabel);
+            this.painelTela.Controls.Add(hotel_ufLabel);
             this.painelTela.Controls.Add(this.bntEnviar);
-            this.painelTela.Controls.Add(this.txtNumero);
-            this.painelTela.Controls.Add(this.txtRua);
-            this.painelTela.Controls.Add(this.txtCidade);
-            this.painelTela.Controls.Add(this.txtEstado);
-            this.painelTela.Controls.Add(this.txtCpf);
-            this.painelTela.Controls.Add(this.label7);
-            this.painelTela.Controls.Add(this.label6);
-            this.painelTela.Controls.Add(this.label5);
-            this.painelTela.Controls.Add(this.label4);
-            this.painelTela.Controls.Add(this.label3);
-            this.painelTela.Controls.Add(this.label1);
             this.painelTela.Dock = System.Windows.Forms.DockStyle.Fill;
             this.painelTela.Location = new System.Drawing.Point(220, 35);
             this.painelTela.Name = "painelTela";
             this.painelTela.Size = new System.Drawing.Size(1080, 615);
             this.painelTela.TabIndex = 2;
             // 
-            // txtTelefone
+            // mtxtUf
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(90, 144);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(512, 20);
-            this.txtTelefone.TabIndex = 15;
+            this.mtxtUf.Location = new System.Drawing.Point(101, 191);
+            this.mtxtUf.Mask = "LL";
+            this.mtxtUf.Name = "mtxtUf";
+            this.mtxtUf.Size = new System.Drawing.Size(19, 20);
+            this.mtxtUf.TabIndex = 37;
             // 
-            // label9
+            // mtxtTelefone
             // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(6, 151);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 13);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "Telefone";
+            this.mtxtTelefone.Location = new System.Drawing.Point(101, 165);
+            this.mtxtTelefone.Mask = "(00) 00000-0000";
+            this.mtxtTelefone.Name = "mtxtTelefone";
+            this.mtxtTelefone.Size = new System.Drawing.Size(97, 20);
+            this.mtxtTelefone.TabIndex = 36;
             // 
-            // txtBairro
+            // mtxtRua
             // 
-            this.txtBairro.Location = new System.Drawing.Point(90, 118);
-            this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(512, 20);
-            this.txtBairro.TabIndex = 13;
+            this.mtxtRua.Location = new System.Drawing.Point(101, 139);
+            this.mtxtRua.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
+            this.mtxtRua.Name = "mtxtRua";
+            this.mtxtRua.Size = new System.Drawing.Size(249, 20);
+            this.mtxtRua.TabIndex = 35;
             // 
-            // label8
+            // mtxtNumero
             // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(6, 125);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 13);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Bairro";
+            this.mtxtNumero.Location = new System.Drawing.Point(101, 113);
+            this.mtxtNumero.Mask = "LLLL";
+            this.mtxtNumero.Name = "mtxtNumero";
+            this.mtxtNumero.Size = new System.Drawing.Size(32, 20);
+            this.mtxtNumero.TabIndex = 34;
+            // 
+            // mtxtCidade
+            // 
+            this.mtxtCidade.Location = new System.Drawing.Point(101, 87);
+            this.mtxtCidade.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
+            this.mtxtCidade.Name = "mtxtCidade";
+            this.mtxtCidade.Size = new System.Drawing.Size(249, 20);
+            this.mtxtCidade.TabIndex = 33;
+            // 
+            // mtxtBairro
+            // 
+            this.mtxtBairro.Location = new System.Drawing.Point(101, 61);
+            this.mtxtBairro.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
+            this.mtxtBairro.Name = "mtxtBairro";
+            this.mtxtBairro.Size = new System.Drawing.Size(249, 20);
+            this.mtxtBairro.TabIndex = 32;
+            // 
+            // mtxtCpf
+            // 
+            this.mtxtCpf.Location = new System.Drawing.Point(101, 35);
+            this.mtxtCpf.Mask = "000,000,000-00";
+            this.mtxtCpf.Name = "mtxtCpf";
+            this.mtxtCpf.Size = new System.Drawing.Size(97, 20);
+            this.mtxtCpf.TabIndex = 31;
             // 
             // bntEnviar
             // 
-            this.bntEnviar.Location = new System.Drawing.Point(21, 328);
+            this.bntEnviar.Location = new System.Drawing.Point(299, 265);
             this.bntEnviar.Name = "bntEnviar";
             this.bntEnviar.Size = new System.Drawing.Size(82, 55);
             this.bntEnviar.TabIndex = 11;
@@ -234,98 +327,9 @@ namespace PIMIII
             this.bntEnviar.UseVisualStyleBackColor = true;
             this.bntEnviar.Click += new System.EventHandler(this.bntEnviar_Click);
             // 
-            // txtNumero
+            // hotelBindingSource
             // 
-            this.txtNumero.Location = new System.Drawing.Point(90, 92);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(512, 20);
-            this.txtNumero.TabIndex = 10;
-            // 
-            // txtRua
-            // 
-            this.txtRua.Location = new System.Drawing.Point(90, 66);
-            this.txtRua.Name = "txtRua";
-            this.txtRua.Size = new System.Drawing.Size(512, 20);
-            this.txtRua.TabIndex = 9;
-            // 
-            // txtCidade
-            // 
-            this.txtCidade.Location = new System.Drawing.Point(90, 39);
-            this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(512, 20);
-            this.txtCidade.TabIndex = 8;
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(90, 13);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(512, 20);
-            this.txtEstado.TabIndex = 7;
-            // 
-            // txtCpf
-            // 
-            this.txtCpf.Location = new System.Drawing.Point(90, 170);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(512, 20);
-            this.txtCpf.TabIndex = 6;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(6, 99);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 13);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Numero";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(6, 69);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(27, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Rua";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(6, 42);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Cidade";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(6, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(18, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Uf";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 177);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "CPF Gerente";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(138, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 0;
+            this.hotelBindingSource.DataSource = typeof(PIMIII.Hotel);
             // 
             // Form1
             // 
@@ -347,6 +351,7 @@ namespace PIMIII
             this.menuVertical.ResumeLayout(false);
             this.painelTela.ResumeLayout(false);
             this.painelTela.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -361,23 +366,16 @@ namespace PIMIII
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnMaximizar;
         private System.Windows.Forms.Button btnMenu;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNumero;
-        private System.Windows.Forms.TextBox txtRua;
-        private System.Windows.Forms.TextBox txtCidade;
-        private System.Windows.Forms.TextBox txtEstado;
-        private System.Windows.Forms.TextBox txtCpf;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button bntEnviar;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtBairro;
-        private System.Windows.Forms.TextBox txtTelefone;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.BindingSource hotelBindingSource;
+        private System.Windows.Forms.MaskedTextBox mtxtUf;
+        private System.Windows.Forms.MaskedTextBox mtxtTelefone;
+        private System.Windows.Forms.MaskedTextBox mtxtRua;
+        private System.Windows.Forms.MaskedTextBox mtxtNumero;
+        private System.Windows.Forms.MaskedTextBox mtxtCidade;
+        private System.Windows.Forms.MaskedTextBox mtxtBairro;
+        private System.Windows.Forms.MaskedTextBox mtxtCpf;
     }
 }
 

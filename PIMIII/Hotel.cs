@@ -10,31 +10,21 @@ namespace PIMIII
     class Hotel
     {
 
-        public int hotel_id { get; set; }
+        public string hotel_uf;
 
-        [Required]
-        [MaxLength(2)]
-        public string hotel_uf { get; set; }
-
-        [Required]
-        public string hotel_cidade { get; set; }
-
-        [Required]
-        public string hotel_rua { get; set; }
-
-        [Required]
-        public string hotel_numerpo { get; set; }
-
-        [Required]
-        public string hotel_bairro { get; set; }
-
-        [Required]
-        [Phone]
-        public int hotel_telefone { get; set; }
-
-        [Required]
-        [MaxLength(11)]
-        public string cpf_gerente { get; set; }
+        public int validarUf(string txt_uf)
+        {
+            if(txt_uf != "RO" || txt_uf != "AC" || txt_uf != "AM" || txt_uf != "RR" || txt_uf != "AP" || txt_uf != "PA" || txt_uf != "TO" || txt_uf != "MA"
+                || txt_uf != "PI" || txt_uf != "CE" || txt_uf != "RN" || txt_uf != "PB" || txt_uf != "PE" || txt_uf != "AL" || txt_uf != "SE" || txt_uf != "BA"
+                 || txt_uf != "MG" || txt_uf != "ES" || txt_uf != "RJ" || txt_uf != "SP" || txt_uf != "SC" || txt_uf != "PR" || txt_uf != "RS" || txt_uf != "MS"
+                  || txt_uf != "MT" || txt_uf != "Go" || txt_uf != "DF")
+            {
+                return 0;
+            }else
+            {
+                return 1;
+            }
+        }
 
     }
 }
