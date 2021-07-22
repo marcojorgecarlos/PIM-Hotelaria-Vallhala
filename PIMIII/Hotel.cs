@@ -39,29 +39,49 @@ namespace PIMIII
             string text = txt_cpf;
             char[] letra = new char[11];
 
-            for (int i = 0; i >= 10; i++)
-            {
-                letra[i] = text[i];
-                cpf[i] = int.Parse(letra[i].ToString());
-            }
+            letra[0] = text[0];
+            letra[1] = text[1];
+            letra[2] = text[2];
+            letra[3] = text[3];
+            letra[4] = text[4];
+            letra[5] = text[5];
+            letra[6] = text[6];
+            letra[7] = text[7];
+            letra[8] = text[8];
+            letra[9] = text[9];
+            letra[10] = text[10];
+
+            cpf[0] = int.Parse(letra[0].ToString());
+            cpf[1] = int.Parse(letra[1].ToString());
+            cpf[2] = int.Parse(letra[2].ToString());
+            cpf[3] = int.Parse(letra[3].ToString());
+            cpf[4] = int.Parse(letra[4].ToString());
+            cpf[5] = int.Parse(letra[5].ToString());
+            cpf[6] = int.Parse(letra[6].ToString());
+            cpf[7] = int.Parse(letra[7].ToString());
+            cpf[8] = int.Parse(letra[8].ToString());
+            cpf[9] = int.Parse(letra[9].ToString());
+            cpf[10] = int.Parse(letra[10].ToString());
 
             int controle = 10;
-            for(int i=0;i <= 10; i++)
+            for (int i = 0; i <= 8; i++)
             {
                 soma_cpf += cpf[i] * controle;
                 controle--;
             }
 
-            if((soma_cpf % 11) > 2)
+            if ((soma_cpf % 11) > 2)
             {
                 digito[0] = 11 - (soma_cpf % 11);
-            }else
+            }
+            else
             {
                 digito[0] = 0;
             }
             controle = 11;
             soma_cpf = 0;
-            for(int i = 0; i >= 10; i++)
+
+            for (int i = 0; i <= 9; i++)
             {
                 soma_cpf += cpf[i] * controle;
                 controle--;
@@ -76,20 +96,21 @@ namespace PIMIII
                 digito[1] = 0;
             }
 
-            if(cpf[9] != digito[0])
+            if (cpf[9] == digito[0])
             {
-                return 0;
-            }
-            else
-            {
-                if(cpf[10] != digito[1])
-                {
-                    return 0;
-                }
-                else
+                if (cpf[10] == digito[1])
                 {
                     return 1;
                 }
+                else
+                {
+                    return 0;
+                }
+
+            }
+            else
+            {
+                return 0;
             }
 
         }
