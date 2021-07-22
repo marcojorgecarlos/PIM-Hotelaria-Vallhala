@@ -48,13 +48,43 @@ namespace PIMIII
         {
             Hotel hotel1 = new Hotel();
 
-            if(hotel1.validarUf(mtxtUf.Text) == 0)
+            
+            /*
+             letra[0] = text[0];
+            MessageBox.Show(letra[0].ToString());
+             letra[1] = text[1];
+            MessageBox.Show(letra[1].ToString());
+            letra[2] = text[2];
+            MessageBox.Show(letra[2].ToString());
+            letra[3] = text[3];
+             letra[4] = text[4];
+             letra[5] = text[5];
+             letra[6] = text[6];
+             letra[7] = text[7];
+             letra[8] = text[8];
+             letra[9] = text[9];
+            letra[10] = text[10];
+            */
+
+            
+            if(hotel1.validarCpf(mtxtCpf.ToString()) == 0)
+            {
+                MessageBox.Show("Por favor digite um cpf valido");
+                return;
+            }
+            
+            if (hotel1.validarUf(mtxtUf.Text) == 0)
             {
                 MessageBox.Show("Por favor digite o uf corretamente");
                 mtxtUf.Text = "";
                 return;
             }
+            else
+            {
+                
+            }
             
+
 
             //Instanciando o objeto conectar da classe SqlCOnnection para conectar ou banco de dados
             SqlConnection conectar = new SqlConnection("Data Source=DESKTOP-I1M48RU\\SQLEXPRESS;Initial Catalog=HotelVallhala;Integrated Security=True");

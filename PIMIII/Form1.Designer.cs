@@ -37,6 +37,7 @@ namespace PIMIII
             System.Windows.Forms.Label hotel_ruaLabel;
             System.Windows.Forms.Label hotel_telefoneLabel;
             System.Windows.Forms.Label hotel_ufLabel;
+            System.Windows.Forms.Label label1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,6 +48,7 @@ namespace PIMIII
             this.menuVertical = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
             this.painelTela = new System.Windows.Forms.Panel();
+            this.mtxtCpfUf = new System.Windows.Forms.MaskedTextBox();
             this.mtxtUf = new System.Windows.Forms.MaskedTextBox();
             this.mtxtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.mtxtRua = new System.Windows.Forms.MaskedTextBox();
@@ -56,6 +58,7 @@ namespace PIMIII
             this.mtxtCpf = new System.Windows.Forms.MaskedTextBox();
             this.bntEnviar = new System.Windows.Forms.Button();
             this.hotelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             cpf_gerenteLabel = new System.Windows.Forms.Label();
             hotel_bairroLabel = new System.Windows.Forms.Label();
             hotel_cidadeLabel = new System.Windows.Forms.Label();
@@ -63,6 +66,7 @@ namespace PIMIII
             hotel_ruaLabel = new System.Windows.Forms.Label();
             hotel_telefoneLabel = new System.Windows.Forms.Label();
             hotel_ufLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -103,7 +107,7 @@ namespace PIMIII
             // hotel_numerpoLabel
             // 
             hotel_numerpoLabel.AutoSize = true;
-            hotel_numerpoLabel.Location = new System.Drawing.Point(18, 120);
+            hotel_numerpoLabel.Location = new System.Drawing.Point(18, 143);
             hotel_numerpoLabel.Name = "hotel_numerpoLabel";
             hotel_numerpoLabel.Size = new System.Drawing.Size(71, 13);
             hotel_numerpoLabel.TabIndex = 24;
@@ -112,7 +116,7 @@ namespace PIMIII
             // hotel_ruaLabel
             // 
             hotel_ruaLabel.AutoSize = true;
-            hotel_ruaLabel.Location = new System.Drawing.Point(18, 146);
+            hotel_ruaLabel.Location = new System.Drawing.Point(18, 169);
             hotel_ruaLabel.Name = "hotel_ruaLabel";
             hotel_ruaLabel.Size = new System.Drawing.Size(51, 13);
             hotel_ruaLabel.TabIndex = 26;
@@ -121,7 +125,7 @@ namespace PIMIII
             // hotel_telefoneLabel
             // 
             hotel_telefoneLabel.AutoSize = true;
-            hotel_telefoneLabel.Location = new System.Drawing.Point(18, 172);
+            hotel_telefoneLabel.Location = new System.Drawing.Point(18, 195);
             hotel_telefoneLabel.Name = "hotel_telefoneLabel";
             hotel_telefoneLabel.Size = new System.Drawing.Size(74, 13);
             hotel_telefoneLabel.TabIndex = 28;
@@ -130,11 +134,20 @@ namespace PIMIII
             // hotel_ufLabel
             // 
             hotel_ufLabel.AutoSize = true;
-            hotel_ufLabel.Location = new System.Drawing.Point(18, 198);
+            hotel_ufLabel.Location = new System.Drawing.Point(18, 221);
             hotel_ufLabel.Name = "hotel_ufLabel";
             hotel_ufLabel.Size = new System.Drawing.Size(45, 13);
             hotel_ufLabel.TabIndex = 30;
             hotel_ufLabel.Text = "hotel uf:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(18, 119);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(37, 13);
+            label1.TabIndex = 38;
+            label1.Text = "Uf Cpf";
             // 
             // barraTitulo
             // 
@@ -240,6 +253,9 @@ namespace PIMIII
             // painelTela
             // 
             this.painelTela.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.painelTela.Controls.Add(this.label3);
+            this.painelTela.Controls.Add(this.mtxtCpfUf);
+            this.painelTela.Controls.Add(label1);
             this.painelTela.Controls.Add(this.mtxtUf);
             this.painelTela.Controls.Add(this.mtxtTelefone);
             this.painelTela.Controls.Add(this.mtxtRua);
@@ -261,9 +277,17 @@ namespace PIMIII
             this.painelTela.Size = new System.Drawing.Size(1080, 615);
             this.painelTela.TabIndex = 2;
             // 
+            // mtxtCpfUf
+            // 
+            this.mtxtCpfUf.Location = new System.Drawing.Point(101, 113);
+            this.mtxtCpfUf.Mask = "LL";
+            this.mtxtCpfUf.Name = "mtxtCpfUf";
+            this.mtxtCpfUf.Size = new System.Drawing.Size(19, 20);
+            this.mtxtCpfUf.TabIndex = 39;
+            // 
             // mtxtUf
             // 
-            this.mtxtUf.Location = new System.Drawing.Point(101, 191);
+            this.mtxtUf.Location = new System.Drawing.Point(101, 214);
             this.mtxtUf.Mask = "LL";
             this.mtxtUf.Name = "mtxtUf";
             this.mtxtUf.Size = new System.Drawing.Size(19, 20);
@@ -271,15 +295,15 @@ namespace PIMIII
             // 
             // mtxtTelefone
             // 
-            this.mtxtTelefone.Location = new System.Drawing.Point(101, 165);
+            this.mtxtTelefone.Location = new System.Drawing.Point(101, 188);
             this.mtxtTelefone.Mask = "(00) 00000-0000";
             this.mtxtTelefone.Name = "mtxtTelefone";
-            this.mtxtTelefone.Size = new System.Drawing.Size(97, 20);
+            this.mtxtTelefone.Size = new System.Drawing.Size(88, 20);
             this.mtxtTelefone.TabIndex = 36;
             // 
             // mtxtRua
             // 
-            this.mtxtRua.Location = new System.Drawing.Point(101, 139);
+            this.mtxtRua.Location = new System.Drawing.Point(101, 162);
             this.mtxtRua.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
             this.mtxtRua.Name = "mtxtRua";
             this.mtxtRua.Size = new System.Drawing.Size(249, 20);
@@ -287,7 +311,7 @@ namespace PIMIII
             // 
             // mtxtNumero
             // 
-            this.mtxtNumero.Location = new System.Drawing.Point(101, 113);
+            this.mtxtNumero.Location = new System.Drawing.Point(101, 136);
             this.mtxtNumero.Mask = "LLLL";
             this.mtxtNumero.Name = "mtxtNumero";
             this.mtxtNumero.Size = new System.Drawing.Size(32, 20);
@@ -311,11 +335,13 @@ namespace PIMIII
             // 
             // mtxtCpf
             // 
+            this.mtxtCpf.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.mtxtCpf.Location = new System.Drawing.Point(101, 35);
             this.mtxtCpf.Mask = "000,000,000-00";
             this.mtxtCpf.Name = "mtxtCpf";
-            this.mtxtCpf.Size = new System.Drawing.Size(97, 20);
+            this.mtxtCpf.Size = new System.Drawing.Size(88, 20);
             this.mtxtCpf.TabIndex = 31;
+            this.mtxtCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // bntEnviar
             // 
@@ -330,6 +356,15 @@ namespace PIMIII
             // hotelBindingSource
             // 
             this.hotelBindingSource.DataSource = typeof(PIMIII.Hotel);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 265);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "label3";
             // 
             // Form1
             // 
@@ -376,6 +411,8 @@ namespace PIMIII
         private System.Windows.Forms.MaskedTextBox mtxtCidade;
         private System.Windows.Forms.MaskedTextBox mtxtBairro;
         private System.Windows.Forms.MaskedTextBox mtxtCpf;
+        private System.Windows.Forms.MaskedTextBox mtxtCpfUf;
+        private System.Windows.Forms.Label label3;
     }
 }
 
