@@ -47,31 +47,35 @@ namespace PIMIII
         private void bntEnviar_Click(object sender, EventArgs e)
         {
             Hotel hotel1 = new Hotel();
+
+            string t = mtxtUf.Text;
+          
+            if (hotel1.validarUf(mtxtUf.Text) == 0)
+            {
+                MessageBox.Show("O uf está vazio ou faltando casas para serem preenchidas");
+                mtxtUf.Text = "";
+                return;
+            }
+            else if(hotel1.validarUf(mtxtUf.Text) == 2)
+            {
+                MessageBox.Show("O uf está incorreto");
+                mtxtUf.Text = "";
+                return;
+            }
             
-            if(hotel1.validarCpf(mtxtCpf.Text.ToString()) == 0)
+            if (hotel1.validarCpf(mtxtCpf.Text) == 0)
             {
                 MessageBox.Show("Por favor digite um cpf valido");
                 mtxtCpf.Text = "";
                 return;
             }
-            else
+            else if (hotel1.validarCpf(mtxtCpf.Text) == 2)
             {
-                MessageBox.Show("cpf valido");
-            }
-            /*
-            if (hotel1.validarUf(mtxtUf.Text) == 0)
-            {
-                MessageBox.Show("Por favor digite o uf corretamente");
-                mtxtUf.Text = "";
+                MessageBox.Show("O Cpf está vazio ou faltando casas para serem preenchidas");
+                mtxtCpf.Text = "";
                 return;
             }
-            else
-            {
-                
-            }
-            */
-
-
+            
 
             //Instanciando o objeto conectar da classe SqlCOnnection para conectar ou banco de dados
             SqlConnection conectar = new SqlConnection("Data Source=DESKTOP-I1M48RU\\SQLEXPRESS;Initial Catalog=HotelVallhala;Integrated Security=True");

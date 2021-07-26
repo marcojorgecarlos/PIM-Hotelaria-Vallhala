@@ -12,23 +12,61 @@ namespace PIMIII
 
         public string hotel_uf;
 
-        public int validarUf(string txt_uf)
+        public int validarNumero(string txt_Numero)
         {
-            if(txt_uf != "RO" || txt_uf != "AC" || txt_uf != "AM" || txt_uf != "RR" || txt_uf != "AP" || txt_uf != "PA" || txt_uf != "TO" || txt_uf != "MA"
-                || txt_uf != "PI" || txt_uf != "CE" || txt_uf != "RN" || txt_uf != "PB" || txt_uf != "PE" || txt_uf != "AL" || txt_uf != "SE" || txt_uf != "BA"
-                 || txt_uf != "MG" || txt_uf != "ES" || txt_uf != "RJ" || txt_uf != "SP" || txt_uf != "SC" || txt_uf != "PR" || txt_uf != "RS" || txt_uf != "MS"
-                  || txt_uf != "MT" || txt_uf != "Go" || txt_uf != "DF")
+            if (txt_Numero.Length <= 10)
             {
                 return 0;
-            }else
-            {
-                return 1;
             }
         }
 
-        public string testeCPf(string txt)
+        public int validarTelefone(string txt_Telefone)
         {
-            return txt;
+
+        }
+
+        public int validarCidade(string txt_Cidade)
+        {
+
+        }
+
+        public int validarNome(string txt_Nome)
+        {
+
+        }
+
+        public int validarBairro(string txt_bairro)
+        {
+
+        }
+
+        public int validarRua(string txt_rua)
+        {
+
+        }
+
+        public int validarUf(string txt_uf)
+        {
+            string t = txt_uf;
+
+            if (t.Length <= 1)
+            {
+                return 0;
+            }
+            
+
+            if (t == "RO" || t == "AC" || t == "AM" || t == "RR" || t == "AP" || t == "PA" || t == "TO" || t == "MA"
+                || t == "PI" || t == "CE" || t == "RN" || t == "PB" || t == "PE" || t == "AL" || t == "SE" || t == "BA"
+                 || t == "MG" || t == "ES" || t == "RJ" || t == "SP" || t == "SC" || t == "PR" || t == "RS" || t == "MS"
+                  || t == "MT" || t == "Go" || t == "DF")
+            {
+                
+                return 1;
+            }
+            else
+            {
+                return 2;
+            }
         }
 
         public int validarCpf(string txt_cpf)
@@ -38,6 +76,11 @@ namespace PIMIII
             int[] digito = new int[2];
             string text = txt_cpf;
             char[] letra = new char[11];
+
+            if(text.Length <= 10)
+            {
+                return 2;
+            }
 
             letra[0] = text[0];
             letra[1] = text[1];

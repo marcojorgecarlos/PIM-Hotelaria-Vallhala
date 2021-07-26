@@ -58,7 +58,6 @@ namespace PIMIII
             this.mtxtCpf = new System.Windows.Forms.MaskedTextBox();
             this.bntEnviar = new System.Windows.Forms.Button();
             this.hotelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label3 = new System.Windows.Forms.Label();
             cpf_gerenteLabel = new System.Windows.Forms.Label();
             hotel_bairroLabel = new System.Windows.Forms.Label();
             hotel_cidadeLabel = new System.Windows.Forms.Label();
@@ -253,7 +252,6 @@ namespace PIMIII
             // painelTela
             // 
             this.painelTela.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.painelTela.Controls.Add(this.label3);
             this.painelTela.Controls.Add(this.mtxtCpfUf);
             this.painelTela.Controls.Add(label1);
             this.painelTela.Controls.Add(this.mtxtUf);
@@ -357,15 +355,6 @@ namespace PIMIII
             // 
             this.hotelBindingSource.DataSource = typeof(PIMIII.Hotel);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 265);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "label3";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -412,7 +401,6 @@ namespace PIMIII
         private System.Windows.Forms.MaskedTextBox mtxtBairro;
         private System.Windows.Forms.MaskedTextBox mtxtCpf;
         private System.Windows.Forms.MaskedTextBox mtxtCpfUf;
-        private System.Windows.Forms.Label label3;
     }
 }
 
