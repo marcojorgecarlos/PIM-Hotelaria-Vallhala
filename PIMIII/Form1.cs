@@ -48,21 +48,54 @@ namespace PIMIII
         {
             Hotel hotel1 = new Hotel();
 
-            string t = mtxtUf.Text;
-          
+            if (hotel1.validarBairro(mtxtBairro.Text) == 0)
+            {
+                MessageBox.Show("O campo bairro está vazio ou é curto demais para ser válido");
+                mtxtBairro.Text = "";
+                return;
+            }
+
+            if(hotel1.validarCidade(mtxtCidade.Text) == 0)
+            {
+                MessageBox.Show("o campo cidade está vazio ou é curto demais para ser válido");
+                mtxtCidade.Text = "";
+                return; 
+            }
+
+            if (hotel1.validarNumero(mtxtNumero.Text) == 0)
+            {
+                MessageBox.Show("O campo número está vazio ou é curto demais para ser válido");
+                mtxtNumero.Text = "";
+                return;
+            }
+
+            if(hotel1.validarRua(mtxtRua.Text) == 0)
+                {
+                    MessageBox.Show("o campo rua está vazio ou é curto demais para ser válido");
+                mtxtRua.Text = "";
+                return;
+                }
+
+            if(hotel1.validarTelefone(mtxtTelefone.Text) == 0)
+                {
+                    MessageBox.Show("O campo telefone está vazio ou é curto demais ");
+                    mtxtTelefone.Text = "";
+                    return;
+                }
+
             if (hotel1.validarUf(mtxtUf.Text) == 0)
             {
                 MessageBox.Show("O uf está vazio ou faltando casas para serem preenchidas");
                 mtxtUf.Text = "";
                 return;
             }
-            else if(hotel1.validarUf(mtxtUf.Text) == 2)
+            else if (hotel1.validarUf(mtxtUf.Text) == 2)
             {
                 MessageBox.Show("O uf está incorreto");
                 mtxtUf.Text = "";
                 return;
             }
-            
+
             if (hotel1.validarCpf(mtxtCpf.Text) == 0)
             {
                 MessageBox.Show("Por favor digite um cpf valido");
@@ -75,7 +108,7 @@ namespace PIMIII
                 mtxtCpf.Text = "";
                 return;
             }
-            
+
 
             //Instanciando o objeto conectar da classe SqlCOnnection para conectar ou banco de dados
             SqlConnection conectar = new SqlConnection("Data Source=DESKTOP-I1M48RU\\SQLEXPRESS;Initial Catalog=HotelVallhala;Integrated Security=True");
@@ -117,5 +150,6 @@ namespace PIMIII
             }
 
         }
+
     }
 }

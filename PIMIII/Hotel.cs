@@ -10,39 +10,64 @@ namespace PIMIII
     class Hotel
     {
 
-        public string hotel_uf;
-
         public int validarNumero(string txt_Numero)
         {
-            if (txt_Numero.Length <= 10)
+            if (txt_Numero.Length == 0)
             {
                 return 0;
+            }
+            else
+            {
+                return 1;
             }
         }
 
         public int validarTelefone(string txt_Telefone)
         {
-
+            if(txt_Telefone.Length <= 10)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
         }
 
         public int validarCidade(string txt_Cidade)
         {
-
-        }
-
-        public int validarNome(string txt_Nome)
-        {
-
+            if (txt_Cidade.Length <= 2)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
         }
 
         public int validarBairro(string txt_bairro)
         {
-
+            if(txt_bairro.Length <= 4)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
         }
 
         public int validarRua(string txt_rua)
         {
-
+            if(txt_rua.Length <= 4)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
         }
 
         public int validarUf(string txt_uf)
