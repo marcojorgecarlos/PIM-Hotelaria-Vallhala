@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.InteropServices;
 
 namespace PIMIII
 {
@@ -55,11 +56,11 @@ namespace PIMIII
                 return;
             }
 
-            if(hotel1.validarCidade(mtxtCidade.Text) == 0)
+            if (hotel1.validarCidade(mtxtCidade.Text) == 0)
             {
                 MessageBox.Show("o campo cidade está vazio ou é curto demais para ser válido");
                 mtxtCidade.Text = "";
-                return; 
+                return;
             }
 
             if (hotel1.validarNumero(mtxtNumero.Text) == 0)
@@ -69,19 +70,19 @@ namespace PIMIII
                 return;
             }
 
-            if(hotel1.validarRua(mtxtRua.Text) == 0)
-                {
-                    MessageBox.Show("o campo rua está vazio ou é curto demais para ser válido");
+            if (hotel1.validarRua(mtxtRua.Text) == 0)
+            {
+                MessageBox.Show("o campo rua está vazio ou é curto demais para ser válido");
                 mtxtRua.Text = "";
                 return;
-                }
+            }
 
-            if(hotel1.validarTelefone(mtxtTelefone.Text) == 0)
-                {
-                    MessageBox.Show("O campo telefone está vazio ou é curto demais ");
-                    mtxtTelefone.Text = "";
-                    return;
-                }
+            if (hotel1.validarTelefone(mtxtTelefone.Text) == 0)
+            {
+                MessageBox.Show("O campo telefone está vazio ou é curto demais ");
+                mtxtTelefone.Text = "";
+                return;
+            }
 
             if (hotel1.validarUf(mtxtUf.Text) == 0)
             {
@@ -151,5 +152,42 @@ namespace PIMIII
 
         }
 
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int iParam);
+
+        private void barraTitulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void abrirFormCdQuarto(object formcdQuarto)
+        {
+            if (this.painelTela.Controls.Count > 0)
+                this.painelTela.Controls.RemoveAt(0);
+            Form fh = formcdQuarto as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.painelTela.Controls.Add(fh);
+            this.painelTela.Tag = fh;
+            this.mtxtBairro.Visible = false;
+            this.mtxtCidade.Visible = false;
+            this.mtxtCpf.Visible = false;
+            this.mtxtNumero.Visible = false;
+            this.mtxtRua.Visible = false;
+            this.mtxtTelefone.Visible = false;
+            this.mtxtUf.Visible = false;
+            fh.Show();
+        }
+        
+        private void btnCdQuarto_Click(object sender, EventArgs e)
+        {
+            abrirFormCdQuarto(new CdQuarto());
+        }
     }
+
+
 }

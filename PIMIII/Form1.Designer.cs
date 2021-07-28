@@ -31,12 +31,12 @@ namespace PIMIII
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label cpf_gerenteLabel;
-            System.Windows.Forms.Label hotel_bairroLabel;
-            System.Windows.Forms.Label hotel_cidadeLabel;
-            System.Windows.Forms.Label hotel_numerpoLabel;
-            System.Windows.Forms.Label hotel_ruaLabel;
-            System.Windows.Forms.Label hotel_telefoneLabel;
-            System.Windows.Forms.Label hotel_ufLabel;
+            System.Windows.Forms.Label label1;
+            System.Windows.Forms.Label label3;
+            System.Windows.Forms.Label label4;
+            System.Windows.Forms.Label label5;
+            System.Windows.Forms.Label label6;
+            System.Windows.Forms.Label label7;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,7 +45,18 @@ namespace PIMIII
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnSair = new System.Windows.Forms.PictureBox();
             this.menuVertical = new System.Windows.Forms.Panel();
-            this.btnMenu = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnCdQuarto = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.painelTela = new System.Windows.Forms.Panel();
             this.mtxtUf = new System.Windows.Forms.MaskedTextBox();
             this.mtxtTelefone = new System.Windows.Forms.MaskedTextBox();
@@ -57,12 +68,12 @@ namespace PIMIII
             this.bntEnviar = new System.Windows.Forms.Button();
             this.hotelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             cpf_gerenteLabel = new System.Windows.Forms.Label();
-            hotel_bairroLabel = new System.Windows.Forms.Label();
-            hotel_cidadeLabel = new System.Windows.Forms.Label();
-            hotel_numerpoLabel = new System.Windows.Forms.Label();
-            hotel_ruaLabel = new System.Windows.Forms.Label();
-            hotel_telefoneLabel = new System.Windows.Forms.Label();
-            hotel_ufLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
+            label5 = new System.Windows.Forms.Label();
+            label6 = new System.Windows.Forms.Label();
+            label7 = new System.Windows.Forms.Label();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -82,59 +93,59 @@ namespace PIMIII
             cpf_gerenteLabel.TabIndex = 16;
             cpf_gerenteLabel.Text = "cpf gerente:";
             // 
-            // hotel_bairroLabel
+            // label1
             // 
-            hotel_bairroLabel.AutoSize = true;
-            hotel_bairroLabel.Location = new System.Drawing.Point(18, 68);
-            hotel_bairroLabel.Name = "hotel_bairroLabel";
-            hotel_bairroLabel.Size = new System.Drawing.Size(62, 13);
-            hotel_bairroLabel.TabIndex = 18;
-            hotel_bairroLabel.Text = "hotel bairro:";
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(18, 68);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(62, 13);
+            label1.TabIndex = 18;
+            label1.Text = "hotel bairro:";
             // 
-            // hotel_cidadeLabel
+            // label3
             // 
-            hotel_cidadeLabel.AutoSize = true;
-            hotel_cidadeLabel.Location = new System.Drawing.Point(18, 94);
-            hotel_cidadeLabel.Name = "hotel_cidadeLabel";
-            hotel_cidadeLabel.Size = new System.Drawing.Size(68, 13);
-            hotel_cidadeLabel.TabIndex = 20;
-            hotel_cidadeLabel.Text = "hotel cidade:";
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(18, 94);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(68, 13);
+            label3.TabIndex = 20;
+            label3.Text = "hotel cidade:";
             // 
-            // hotel_numerpoLabel
+            // label4
             // 
-            hotel_numerpoLabel.AutoSize = true;
-            hotel_numerpoLabel.Location = new System.Drawing.Point(18, 125);
-            hotel_numerpoLabel.Name = "hotel_numerpoLabel";
-            hotel_numerpoLabel.Size = new System.Drawing.Size(71, 13);
-            hotel_numerpoLabel.TabIndex = 24;
-            hotel_numerpoLabel.Text = "hotel numero:";
+            label4.AutoSize = true;
+            label4.Location = new System.Drawing.Point(18, 125);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(71, 13);
+            label4.TabIndex = 24;
+            label4.Text = "hotel numero:";
             // 
-            // hotel_ruaLabel
+            // label5
             // 
-            hotel_ruaLabel.AutoSize = true;
-            hotel_ruaLabel.Location = new System.Drawing.Point(18, 151);
-            hotel_ruaLabel.Name = "hotel_ruaLabel";
-            hotel_ruaLabel.Size = new System.Drawing.Size(51, 13);
-            hotel_ruaLabel.TabIndex = 26;
-            hotel_ruaLabel.Text = "hotel rua:";
+            label5.AutoSize = true;
+            label5.Location = new System.Drawing.Point(18, 151);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(51, 13);
+            label5.TabIndex = 26;
+            label5.Text = "hotel rua:";
             // 
-            // hotel_telefoneLabel
+            // label6
             // 
-            hotel_telefoneLabel.AutoSize = true;
-            hotel_telefoneLabel.Location = new System.Drawing.Point(18, 177);
-            hotel_telefoneLabel.Name = "hotel_telefoneLabel";
-            hotel_telefoneLabel.Size = new System.Drawing.Size(74, 13);
-            hotel_telefoneLabel.TabIndex = 28;
-            hotel_telefoneLabel.Text = "hotel telefone:";
+            label6.AutoSize = true;
+            label6.Location = new System.Drawing.Point(18, 177);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(74, 13);
+            label6.TabIndex = 28;
+            label6.Text = "hotel telefone:";
             // 
-            // hotel_ufLabel
+            // label7
             // 
-            hotel_ufLabel.AutoSize = true;
-            hotel_ufLabel.Location = new System.Drawing.Point(18, 203);
-            hotel_ufLabel.Name = "hotel_ufLabel";
-            hotel_ufLabel.Size = new System.Drawing.Size(45, 13);
-            hotel_ufLabel.TabIndex = 30;
-            hotel_ufLabel.Text = "hotel uf:";
+            label7.AutoSize = true;
+            label7.Location = new System.Drawing.Point(18, 203);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(45, 13);
+            label7.TabIndex = 30;
+            label7.Text = "hotel uf:";
             // 
             // barraTitulo
             // 
@@ -149,6 +160,7 @@ namespace PIMIII
             this.barraTitulo.Name = "barraTitulo";
             this.barraTitulo.Size = new System.Drawing.Size(1300, 35);
             this.barraTitulo.TabIndex = 0;
+            this.barraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barraTitulo_MouseDown);
             // 
             // label2
             // 
@@ -217,25 +229,181 @@ namespace PIMIII
             // menuVertical
             // 
             this.menuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.menuVertical.Controls.Add(this.btnMenu);
+            this.menuVertical.Controls.Add(this.panel6);
+            this.menuVertical.Controls.Add(this.button6);
+            this.menuVertical.Controls.Add(this.panel5);
+            this.menuVertical.Controls.Add(this.button5);
+            this.menuVertical.Controls.Add(this.panel4);
+            this.menuVertical.Controls.Add(this.btnCdQuarto);
+            this.menuVertical.Controls.Add(this.panel3);
+            this.menuVertical.Controls.Add(this.button3);
+            this.menuVertical.Controls.Add(this.panel2);
+            this.menuVertical.Controls.Add(this.button2);
+            this.menuVertical.Controls.Add(this.panel1);
+            this.menuVertical.Controls.Add(this.button1);
             this.menuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuVertical.Location = new System.Drawing.Point(0, 35);
             this.menuVertical.Name = "menuVertical";
             this.menuVertical.Size = new System.Drawing.Size(220, 615);
             this.menuVertical.TabIndex = 1;
             // 
-            // btnMenu
+            // panel6
             // 
-            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(200)))));
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.ForeColor = System.Drawing.Color.White;
-            this.btnMenu.Location = new System.Drawing.Point(3, 6);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(214, 23);
-            this.btnMenu.TabIndex = 1;
-            this.btnMenu.Text = "Menu";
-            this.btnMenu.UseVisualStyleBackColor = false;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel6.Location = new System.Drawing.Point(0, 232);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(5, 32);
+            this.panel6.TabIndex = 11;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(0, 232);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(220, 32);
+            this.button6.TabIndex = 10;
+            this.button6.Text = "Relatórios";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel5.Location = new System.Drawing.Point(0, 194);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(5, 32);
+            this.panel5.TabIndex = 9;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(0, 194);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(220, 32);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "Realizar Reserva";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel4.Location = new System.Drawing.Point(0, 156);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(5, 32);
+            this.panel4.TabIndex = 7;
+            // 
+            // btnCdQuarto
+            // 
+            this.btnCdQuarto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCdQuarto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCdQuarto.FlatAppearance.BorderSize = 0;
+            this.btnCdQuarto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnCdQuarto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCdQuarto.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCdQuarto.ForeColor = System.Drawing.Color.White;
+            this.btnCdQuarto.Image = ((System.Drawing.Image)(resources.GetObject("btnCdQuarto.Image")));
+            this.btnCdQuarto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCdQuarto.Location = new System.Drawing.Point(0, 156);
+            this.btnCdQuarto.Name = "btnCdQuarto";
+            this.btnCdQuarto.Size = new System.Drawing.Size(220, 32);
+            this.btnCdQuarto.TabIndex = 6;
+            this.btnCdQuarto.Text = "Cadastrar Quarto";
+            this.btnCdQuarto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCdQuarto.UseVisualStyleBackColor = false;
+            this.btnCdQuarto.Click += new System.EventHandler(this.btnCdQuarto_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel3.Location = new System.Drawing.Point(0, 118);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(5, 32);
+            this.panel3.TabIndex = 5;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 118);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(220, 32);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Cadastar Cliente";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel2.Location = new System.Drawing.Point(0, 79);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(5, 32);
+            this.panel2.TabIndex = 3;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 79);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(220, 32);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Cadastrar Funcionário";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel1.Location = new System.Drawing.Point(0, 42);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(5, 32);
+            this.panel1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 42);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(220, 32);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Cadastrar Hotel";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // painelTela
             // 
@@ -248,12 +416,12 @@ namespace PIMIII
             this.painelTela.Controls.Add(this.mtxtBairro);
             this.painelTela.Controls.Add(this.mtxtCpf);
             this.painelTela.Controls.Add(cpf_gerenteLabel);
-            this.painelTela.Controls.Add(hotel_bairroLabel);
-            this.painelTela.Controls.Add(hotel_cidadeLabel);
-            this.painelTela.Controls.Add(hotel_numerpoLabel);
-            this.painelTela.Controls.Add(hotel_ruaLabel);
-            this.painelTela.Controls.Add(hotel_telefoneLabel);
-            this.painelTela.Controls.Add(hotel_ufLabel);
+            this.painelTela.Controls.Add(label1);
+            this.painelTela.Controls.Add(label3);
+            this.painelTela.Controls.Add(label4);
+            this.painelTela.Controls.Add(label5);
+            this.painelTela.Controls.Add(label6);
+            this.painelTela.Controls.Add(label7);
             this.painelTela.Controls.Add(this.bntEnviar);
             this.painelTela.Dock = System.Windows.Forms.DockStyle.Fill;
             this.painelTela.Location = new System.Drawing.Point(220, 35);
@@ -367,7 +535,6 @@ namespace PIMIII
         private System.Windows.Forms.PictureBox btnRestaurar;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnMaximizar;
-        private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button bntEnviar;
         private System.Windows.Forms.BindingSource hotelBindingSource;
@@ -378,6 +545,18 @@ namespace PIMIII
         private System.Windows.Forms.MaskedTextBox mtxtCidade;
         private System.Windows.Forms.MaskedTextBox mtxtBairro;
         private System.Windows.Forms.MaskedTextBox mtxtCpf;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnCdQuarto;
     }
 }
 
