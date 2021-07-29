@@ -30,13 +30,6 @@ namespace PIMIII
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label cpf_gerenteLabel;
-            System.Windows.Forms.Label label1;
-            System.Windows.Forms.Label label3;
-            System.Windows.Forms.Label label4;
-            System.Windows.Forms.Label label5;
-            System.Windows.Forms.Label label6;
-            System.Windows.Forms.Label label7;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,106 +39,27 @@ namespace PIMIII
             this.btnSair = new System.Windows.Forms.PictureBox();
             this.menuVertical = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnRelatorio = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnReserva = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnCdQuarto = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnCadastrarCliente = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCadastrarFuncionario = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnHotel = new System.Windows.Forms.Button();
             this.painelTela = new System.Windows.Forms.Panel();
-            this.mtxtUf = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtRua = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtNumero = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtCidade = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtBairro = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtCpf = new System.Windows.Forms.MaskedTextBox();
-            this.bntEnviar = new System.Windows.Forms.Button();
             this.hotelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            cpf_gerenteLabel = new System.Windows.Forms.Label();
-            label1 = new System.Windows.Forms.Label();
-            label3 = new System.Windows.Forms.Label();
-            label4 = new System.Windows.Forms.Label();
-            label5 = new System.Windows.Forms.Label();
-            label6 = new System.Windows.Forms.Label();
-            label7 = new System.Windows.Forms.Label();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).BeginInit();
             this.menuVertical.SuspendLayout();
-            this.painelTela.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hotelBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cpf_gerenteLabel
-            // 
-            cpf_gerenteLabel.AutoSize = true;
-            cpf_gerenteLabel.Location = new System.Drawing.Point(18, 42);
-            cpf_gerenteLabel.Name = "cpf_gerenteLabel";
-            cpf_gerenteLabel.Size = new System.Drawing.Size(64, 13);
-            cpf_gerenteLabel.TabIndex = 16;
-            cpf_gerenteLabel.Text = "cpf gerente:";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(18, 68);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(62, 13);
-            label1.TabIndex = 18;
-            label1.Text = "hotel bairro:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(18, 94);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(68, 13);
-            label3.TabIndex = 20;
-            label3.Text = "hotel cidade:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(18, 125);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(71, 13);
-            label4.TabIndex = 24;
-            label4.Text = "hotel numero:";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(18, 151);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(51, 13);
-            label5.TabIndex = 26;
-            label5.Text = "hotel rua:";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new System.Drawing.Point(18, 177);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(74, 13);
-            label6.TabIndex = 28;
-            label6.Text = "hotel telefone:";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new System.Drawing.Point(18, 203);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(45, 13);
-            label7.TabIndex = 30;
-            label7.Text = "hotel uf:";
             // 
             // barraTitulo
             // 
@@ -230,17 +144,17 @@ namespace PIMIII
             // 
             this.menuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.menuVertical.Controls.Add(this.panel6);
-            this.menuVertical.Controls.Add(this.button6);
+            this.menuVertical.Controls.Add(this.btnRelatorio);
             this.menuVertical.Controls.Add(this.panel5);
-            this.menuVertical.Controls.Add(this.button5);
+            this.menuVertical.Controls.Add(this.btnReserva);
             this.menuVertical.Controls.Add(this.panel4);
             this.menuVertical.Controls.Add(this.btnCdQuarto);
             this.menuVertical.Controls.Add(this.panel3);
-            this.menuVertical.Controls.Add(this.button3);
+            this.menuVertical.Controls.Add(this.btnCadastrarCliente);
             this.menuVertical.Controls.Add(this.panel2);
-            this.menuVertical.Controls.Add(this.button2);
+            this.menuVertical.Controls.Add(this.btnCadastrarFuncionario);
             this.menuVertical.Controls.Add(this.panel1);
-            this.menuVertical.Controls.Add(this.button1);
+            this.menuVertical.Controls.Add(this.btnHotel);
             this.menuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuVertical.Location = new System.Drawing.Point(0, 35);
             this.menuVertical.Name = "menuVertical";
@@ -255,23 +169,23 @@ namespace PIMIII
             this.panel6.Size = new System.Drawing.Size(5, 32);
             this.panel6.TabIndex = 11;
             // 
-            // button6
+            // btnRelatorio
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 232);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(220, 32);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "Relatórios";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnRelatorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnRelatorio.FlatAppearance.BorderSize = 0;
+            this.btnRelatorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRelatorio.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRelatorio.ForeColor = System.Drawing.Color.White;
+            this.btnRelatorio.Image = ((System.Drawing.Image)(resources.GetObject("btnRelatorio.Image")));
+            this.btnRelatorio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRelatorio.Location = new System.Drawing.Point(0, 232);
+            this.btnRelatorio.Name = "btnRelatorio";
+            this.btnRelatorio.Size = new System.Drawing.Size(220, 32);
+            this.btnRelatorio.TabIndex = 10;
+            this.btnRelatorio.Text = "Relatórios";
+            this.btnRelatorio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRelatorio.UseVisualStyleBackColor = false;
             // 
             // panel5
             // 
@@ -281,23 +195,23 @@ namespace PIMIII
             this.panel5.Size = new System.Drawing.Size(5, 32);
             this.panel5.TabIndex = 9;
             // 
-            // button5
+            // btnReserva
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 194);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(220, 32);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Realizar Reserva";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnReserva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnReserva.FlatAppearance.BorderSize = 0;
+            this.btnReserva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReserva.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReserva.ForeColor = System.Drawing.Color.White;
+            this.btnReserva.Image = ((System.Drawing.Image)(resources.GetObject("btnReserva.Image")));
+            this.btnReserva.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReserva.Location = new System.Drawing.Point(0, 194);
+            this.btnReserva.Name = "btnReserva";
+            this.btnReserva.Size = new System.Drawing.Size(220, 32);
+            this.btnReserva.TabIndex = 8;
+            this.btnReserva.Text = "Realizar Reserva";
+            this.btnReserva.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReserva.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
@@ -335,23 +249,24 @@ namespace PIMIII
             this.panel3.Size = new System.Drawing.Size(5, 32);
             this.panel3.TabIndex = 5;
             // 
-            // button3
+            // btnCadastrarCliente
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 118);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(220, 32);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Cadastar Cliente";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnCadastrarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCadastrarCliente.FlatAppearance.BorderSize = 0;
+            this.btnCadastrarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnCadastrarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarCliente.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarCliente.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarCliente.Image")));
+            this.btnCadastrarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarCliente.Location = new System.Drawing.Point(0, 118);
+            this.btnCadastrarCliente.Name = "btnCadastrarCliente";
+            this.btnCadastrarCliente.Size = new System.Drawing.Size(220, 32);
+            this.btnCadastrarCliente.TabIndex = 4;
+            this.btnCadastrarCliente.Text = "Cadastar Cliente";
+            this.btnCadastrarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCadastrarCliente.UseVisualStyleBackColor = false;
+            this.btnCadastrarCliente.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel2
             // 
@@ -361,23 +276,23 @@ namespace PIMIII
             this.panel2.Size = new System.Drawing.Size(5, 32);
             this.panel2.TabIndex = 3;
             // 
-            // button2
+            // btnCadastrarFuncionario
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 79);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(220, 32);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Cadastrar Funcionário";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnCadastrarFuncionario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCadastrarFuncionario.FlatAppearance.BorderSize = 0;
+            this.btnCadastrarFuncionario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnCadastrarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarFuncionario.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarFuncionario.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrarFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarFuncionario.Image")));
+            this.btnCadastrarFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(0, 79);
+            this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
+            this.btnCadastrarFuncionario.Size = new System.Drawing.Size(220, 32);
+            this.btnCadastrarFuncionario.TabIndex = 2;
+            this.btnCadastrarFuncionario.Text = "Cadastrar Funcionário";
+            this.btnCadastrarFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCadastrarFuncionario.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -387,115 +302,33 @@ namespace PIMIII
             this.panel1.Size = new System.Drawing.Size(5, 32);
             this.panel1.TabIndex = 1;
             // 
-            // button1
+            // btnHotel
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 42);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(220, 32);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Cadastrar Hotel";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnHotel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnHotel.FlatAppearance.BorderSize = 0;
+            this.btnHotel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnHotel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHotel.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHotel.ForeColor = System.Drawing.Color.White;
+            this.btnHotel.Image = ((System.Drawing.Image)(resources.GetObject("btnHotel.Image")));
+            this.btnHotel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHotel.Location = new System.Drawing.Point(0, 42);
+            this.btnHotel.Name = "btnHotel";
+            this.btnHotel.Size = new System.Drawing.Size(220, 32);
+            this.btnHotel.TabIndex = 0;
+            this.btnHotel.Text = "Cadastrar Hotel";
+            this.btnHotel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHotel.UseVisualStyleBackColor = false;
+            this.btnHotel.Click += new System.EventHandler(this.button1_Click);
             // 
             // painelTela
             // 
             this.painelTela.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.painelTela.Controls.Add(this.mtxtUf);
-            this.painelTela.Controls.Add(this.mtxtTelefone);
-            this.painelTela.Controls.Add(this.mtxtRua);
-            this.painelTela.Controls.Add(this.mtxtNumero);
-            this.painelTela.Controls.Add(this.mtxtCidade);
-            this.painelTela.Controls.Add(this.mtxtBairro);
-            this.painelTela.Controls.Add(this.mtxtCpf);
-            this.painelTela.Controls.Add(cpf_gerenteLabel);
-            this.painelTela.Controls.Add(label1);
-            this.painelTela.Controls.Add(label3);
-            this.painelTela.Controls.Add(label4);
-            this.painelTela.Controls.Add(label5);
-            this.painelTela.Controls.Add(label6);
-            this.painelTela.Controls.Add(label7);
-            this.painelTela.Controls.Add(this.bntEnviar);
             this.painelTela.Dock = System.Windows.Forms.DockStyle.Fill;
             this.painelTela.Location = new System.Drawing.Point(220, 35);
             this.painelTela.Name = "painelTela";
             this.painelTela.Size = new System.Drawing.Size(1080, 615);
             this.painelTela.TabIndex = 2;
-            // 
-            // mtxtUf
-            // 
-            this.mtxtUf.Location = new System.Drawing.Point(101, 196);
-            this.mtxtUf.Mask = "LL";
-            this.mtxtUf.Name = "mtxtUf";
-            this.mtxtUf.Size = new System.Drawing.Size(19, 20);
-            this.mtxtUf.TabIndex = 37;
-            // 
-            // mtxtTelefone
-            // 
-            this.mtxtTelefone.Location = new System.Drawing.Point(101, 170);
-            this.mtxtTelefone.Mask = "(00) 00000-0000";
-            this.mtxtTelefone.Name = "mtxtTelefone";
-            this.mtxtTelefone.Size = new System.Drawing.Size(88, 20);
-            this.mtxtTelefone.TabIndex = 36;
-            // 
-            // mtxtRua
-            // 
-            this.mtxtRua.Location = new System.Drawing.Point(101, 144);
-            this.mtxtRua.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
-            this.mtxtRua.Name = "mtxtRua";
-            this.mtxtRua.Size = new System.Drawing.Size(249, 20);
-            this.mtxtRua.TabIndex = 35;
-            // 
-            // mtxtNumero
-            // 
-            this.mtxtNumero.Location = new System.Drawing.Point(101, 118);
-            this.mtxtNumero.Mask = "CCCC";
-            this.mtxtNumero.Name = "mtxtNumero";
-            this.mtxtNumero.Size = new System.Drawing.Size(32, 20);
-            this.mtxtNumero.TabIndex = 34;
-            // 
-            // mtxtCidade
-            // 
-            this.mtxtCidade.Location = new System.Drawing.Point(101, 87);
-            this.mtxtCidade.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
-            this.mtxtCidade.Name = "mtxtCidade";
-            this.mtxtCidade.Size = new System.Drawing.Size(249, 20);
-            this.mtxtCidade.TabIndex = 33;
-            // 
-            // mtxtBairro
-            // 
-            this.mtxtBairro.Location = new System.Drawing.Point(101, 61);
-            this.mtxtBairro.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
-            this.mtxtBairro.Name = "mtxtBairro";
-            this.mtxtBairro.Size = new System.Drawing.Size(249, 20);
-            this.mtxtBairro.TabIndex = 32;
-            // 
-            // mtxtCpf
-            // 
-            this.mtxtCpf.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.mtxtCpf.Location = new System.Drawing.Point(101, 35);
-            this.mtxtCpf.Mask = "000,000,000-00";
-            this.mtxtCpf.Name = "mtxtCpf";
-            this.mtxtCpf.Size = new System.Drawing.Size(88, 20);
-            this.mtxtCpf.TabIndex = 31;
-            this.mtxtCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            // 
-            // bntEnviar
-            // 
-            this.bntEnviar.Location = new System.Drawing.Point(299, 265);
-            this.bntEnviar.Name = "bntEnviar";
-            this.bntEnviar.Size = new System.Drawing.Size(82, 55);
-            this.bntEnviar.TabIndex = 11;
-            this.bntEnviar.Text = "Enviar";
-            this.bntEnviar.UseVisualStyleBackColor = true;
-            this.bntEnviar.Click += new System.EventHandler(this.bntEnviar_Click);
             // 
             // hotelBindingSource
             // 
@@ -519,8 +352,6 @@ namespace PIMIII
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).EndInit();
             this.menuVertical.ResumeLayout(false);
-            this.painelTela.ResumeLayout(false);
-            this.painelTela.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hotelBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -536,25 +367,17 @@ namespace PIMIII
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnMaximizar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button bntEnviar;
         private System.Windows.Forms.BindingSource hotelBindingSource;
-        private System.Windows.Forms.MaskedTextBox mtxtUf;
-        private System.Windows.Forms.MaskedTextBox mtxtTelefone;
-        private System.Windows.Forms.MaskedTextBox mtxtRua;
-        private System.Windows.Forms.MaskedTextBox mtxtNumero;
-        private System.Windows.Forms.MaskedTextBox mtxtCidade;
-        private System.Windows.Forms.MaskedTextBox mtxtBairro;
-        private System.Windows.Forms.MaskedTextBox mtxtCpf;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnHotel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnCadastrarCliente;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCadastrarFuncionario;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnRelatorio;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnReserva;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnCdQuarto;
     }

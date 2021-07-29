@@ -47,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastrarCliente.Designer.cs">
+      <DependentUpon>CadastrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastrarHotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastrarHotel.Designer.cs">
+      <DependentUpon>CadastrarHotel.cs</DependentUpon>
+    </Compile>
     <Compile Include="CdQuarto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +81,18 @@
     <Compile Include="TelaInicial.Designer.cs">
       <DependentUpon>TelaInicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaLogin.Designer.cs">
+      <DependentUpon>TelaLogin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CadastrarCliente.resx">
+      <DependentUpon>CadastrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastrarHotel.resx">
+      <DependentUpon>CadastrarHotel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CdQuarto.resx">
       <DependentUpon>CdQuarto.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +111,9 @@
     </Compile>
     <EmbeddedResource Include="TelaInicial.resx">
       <DependentUpon>TelaInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaLogin.resx">
+      <DependentUpon>TelaLogin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\Hotel.datasource" />
     <None Include="Properties\Settings.settings">
