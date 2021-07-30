@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using PIMIII.classes;
 
 namespace PIMIII
 {
@@ -42,13 +42,23 @@ namespace PIMIII
 
         private void btnLogar_Click(object sender, EventArgs e)
         {
-            SqlConnection conectar = new SqlConnection("Data Source = DESKTOP - I1M48RU\\SQLEXPRESS; Initial Catalog = HotelVallhala; Integrated Security = True");
-
-            try
+            Controle controle = new Controle();
+            controle.controleLogin(mtxtUsuario.Text, mtxtSenha.Text);
+            if (controle.mensagem.Equals(""))
             {
-                SqlCommand c = new SqlCommand("select");
+                if (controle.tem)
+                {
+                    MessageBox.Show("Logado com sucesso");
+                }
+                else
+                {
+                    MessageBox.Show("Login nao encontrado");
+                }
             }
-
+            else
+            {
+                MessageBox.Show(controle.mensagem);
+            }
         }
     }
 }

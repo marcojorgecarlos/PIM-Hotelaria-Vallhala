@@ -29,7 +29,6 @@ C:\Users\MarcoAntonio\source\repos\PIM-Hotelaria-Vallhala\PIMIII\obj\Debug\PIMII
 C:\Users\MarcoAntonio\source\repos\PIM-Hotelaria-Vallhala\PIMIII\obj\Debug\PIMIII.exe
 C:\Users\MarcoAntonio\source\repos\PIM-Hotelaria-Vallhala\PIMIII\obj\Debug\PIMIII.pdb
 C:\Users\MarcoAntonio\source\repos\PIM-Hotelaria-Vallhala\PIMIII\obj\Debug\PIMIII.CdQuarto.resources
-C:\Users\MarcoAntonio\source\repos\PIM-Hotelaria-Vallhala\PIMIII\obj\Debug\PIMIII.TelaInicial.resources
 C:\Users\MarcoAntonio\source\repos\PIM-Hotelaria-Vallhala\PIMIII\obj\Debug\PIMIII.CadastrarCliente.resources
 C:\Users\MarcoAntonio\source\repos\PIM-Hotelaria-Vallhala\PIMIII\obj\Debug\PIMIII.CadastrarHotel.resources
 C:\Users\MarcoAntonio\source\repos\PIM-Hotelaria-Vallhala\PIMIII\obj\Debug\PIMIII.TelaLogin.resources
