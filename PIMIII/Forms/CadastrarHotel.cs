@@ -71,18 +71,13 @@ namespace PIMIII
                 return;
             }
 
-            if (hotel1.validarCpf(mtxtCpf.Text) == 0)
+            if (!hotel1.validarCpf(mtxtCpf.Text))
             {
                 MessageBox.Show("Por favor digite um cpf valido");
                 mtxtCpf.Text = "";
                 return;
             }
-            else if (hotel1.validarCpf(mtxtCpf.Text) == 2)
-            {
-                MessageBox.Show("O Cpf está vazio ou faltando casas para serem preenchidas");
-                mtxtCpf.Text = "";
-                return;
-            }
+      
 
 
             //Instanciando o objeto conectar da classe SqlCOnnection para conectar ou banco de dados

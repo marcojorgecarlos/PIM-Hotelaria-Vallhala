@@ -10,6 +10,8 @@ namespace PIMIII
     class Hotel
     {
 
+        public bool vrCpf = false;
+
         public int validarNumero(string txt_Numero)
         {
             if (txt_Numero.Length == 0)
@@ -94,7 +96,7 @@ namespace PIMIII
             }
         }
 
-        public int validarCpf(string txt_cpf)
+        public bool validarCpf(String txt_cpf)
         {
             int[] cpf = new int[11];
             int soma_cpf = 0;
@@ -104,7 +106,7 @@ namespace PIMIII
 
             if(text.Length <= 10)
             {
-                return 2;
+                return vrCpf;
             }
 
             letra[0] = text[0];
@@ -168,17 +170,18 @@ namespace PIMIII
             {
                 if (cpf[10] == digito[1])
                 {
-                    return 1;
+                    vrCpf = true;
+                    return vrCpf;
                 }
                 else
                 {
-                    return 0;
+                    return vrCpf;
                 }
 
             }
             else
             {
-                return 0;
+                return vrCpf;
             }
 
         }

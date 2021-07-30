@@ -83,6 +83,11 @@ namespace PIMIII
         {
             abrirForm(new CadastrarHotel());
         }
+
+        private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

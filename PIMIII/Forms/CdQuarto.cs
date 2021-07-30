@@ -16,5 +16,10 @@ namespace PIMIII
         {
             InitializeComponent();
         }
+
+        private void CdQuarto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -43,11 +43,13 @@ namespace PIMIII
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.maskedTextBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CdQuarto";
             this.Text = "CdQuarto";
+            this.Load += new System.EventHandler(this.CdQuarto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

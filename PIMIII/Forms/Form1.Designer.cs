@@ -293,6 +293,7 @@ namespace PIMIII
             this.btnCadastrarFuncionario.Text = "Cadastrar Funcionário";
             this.btnCadastrarFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastrarFuncionario.UseVisualStyleBackColor = false;
+            this.btnCadastrarFuncionario.Click += new System.EventHandler(this.btnCadastrarFuncionario_Click);
             // 
             // panel1
             // 

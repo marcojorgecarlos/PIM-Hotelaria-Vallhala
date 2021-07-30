@@ -46,9 +46,12 @@ namespace PIMIII
             controle.controleLogin(mtxtUsuario.Text, mtxtSenha.Text);
             if (controle.mensagem.Equals(""))
             {
-                if (controle.tem)
+                if (controle.vrLogin)
                 {
-                    MessageBox.Show("Logado com sucesso");
+                    Form1 fh = new Form1();
+                    this.Hide();
+                    fh.Show();
+                    
                 }
                 else
                 {

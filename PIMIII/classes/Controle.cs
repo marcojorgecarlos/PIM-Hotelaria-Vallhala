@@ -8,18 +8,26 @@ namespace PIMIII.classes
 {
     public class Controle
     {
-        public bool tem;
+        public bool vrLogin;
+        public bool vrCpf;
         public String mensagem = "";
 
         public bool controleLogin(String Login, String Senha)
         {
             ComandoSql comando = new ComandoSql();
-            tem = comando.pesquisarLogin(Login, Senha);
+            vrLogin = comando.pesquisarLogin(Login, Senha);
             if (!comando.mensagem.Equals(""))
             {
                 this.mensagem = comando.mensagem;
             }
-            return tem;
+            return vrLogin;
+        }
+
+        public bool controleCpf(String cpf)
+        {
+            Hotel verificacao = new Hotel();
+            vrCpf = verificacao.validarCpf(cpf);
+            return vrCpf;
         }
     }
 }
