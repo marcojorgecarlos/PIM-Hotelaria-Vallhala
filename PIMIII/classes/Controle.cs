@@ -11,10 +11,11 @@ namespace PIMIII.classes
         public bool vrLogin;
         public bool vrCpf;
         public String mensagem = "";
-        ComandoSql comandosql = new ComandoSql();
+        
 
         public bool controleLogin(String Login, String Senha)
         {
+            ComandoSql comandosql = new ComandoSql();
             vrLogin = comandosql.pesquisarLogin(Login, Senha);
             if (!comandosql.mensagem.Equals(""))
             {
@@ -23,15 +24,51 @@ namespace PIMIII.classes
             return vrLogin;
         }
 
-        public bool controleCpf(String cpf)
+        public void validarHotel(String cpfGerente, String uf, String cidade, String rua, String numero, String bairro, String telefone)
         {
             Hotel verificacao = new Hotel();
-            vrCpf = verificacao.validarCpf(cpf);
-            if (!comandosql.mensagem.Equals(""))
+
+            verificacao.validarTelefone(telefone);
+            if (!verificacao.mensagem.Equals(""))
             {
-                this.mensagem = comandosql.mensagem;
+                this.mensagem = verificacao.mensagem;
+                return;
             }
-            return vrCpf;
+            verificacao.validarCpf(cpfGerente);
+            if (!verificacao.mensagem.Equals(""))
+            {
+                this.mensagem = verificacao.mensagem;
+            }
+            verificacao.validarBairro(bairro);
+            if (!verificacao.mensagem.Equals(""))
+            {
+                this.mensagem = verificacao.mensagem;
+                return;
+            }
+            verificacao.validarCidade(cidade);
+            if (!verificacao.mensagem.Equals(""))
+            {
+                this.mensagem = verificacao.mensagem;
+                return;
+            }
+            verificacao.validarNumero(numero);
+            if (!verificacao.mensagem.Equals(""))
+            {
+                this.mensagem = verificacao.mensagem;
+                return;
+            }
+            verificacao.validarRua(rua);
+            if (!verificacao.mensagem.Equals(""))
+            {
+                this.mensagem = verificacao.mensagem;
+                return;
+            }
+            verificacao.validarUf(uf);
+            if (!verificacao.mensagem.Equals(""))
+            {
+                this.mensagem = verificacao.mensagem;
+            }
+           
         }
     }
 }

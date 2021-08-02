@@ -32,6 +32,7 @@ namespace PIMIII.classes
                 {
                     validacao = false;
                 }
+               con.desconectar();
             }
             catch (SqlException)
             {
@@ -54,7 +55,7 @@ namespace PIMIII.classes
             try
             {
 
-                con.Conectar();
+                cmd.Connection = con.Conectar();
                 cmd.ExecuteNonQuery();
                 con.desconectar();
                 validacao = true;

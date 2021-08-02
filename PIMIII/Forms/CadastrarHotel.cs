@@ -22,50 +22,25 @@ namespace PIMIII
         private void bntEnviar_Click(object sender, EventArgs e)
         {
             Controle controle = new Controle();
-            Hotel hotel = new Hotel();
+            ComandoSql cadastrarhotel = new ComandoSql();
+            controle.validarHotel(mtxtCpf.Text, mtxtUf.Text, mtxtCidade.Text, mtxtRua.Text, mtxtNumero.Text, mtxtBairro.Text, mtxtTelefone.Text);
 
-            if (controle.controleCpf(mtxtCpf.Text))
+            if (controle.mensagem.Equals(""))
             {
-
+                
+                if (cadastrarhotel.inserirHotel(mtxtCpf.Text, mtxtUf.Text, mtxtCidade.Text, mtxtRua.Text, mtxtNumero.Text, mtxtBairro.Text, mtxtTelefone.Text))
+                {
+                    MessageBox.Show("Hotel Cadastrado com sucesso");
+                }
+                else
+                {
+                    MessageBox.Show(cadastrarhotel.mensagem);
+                }
+                
             }
-
-            //Instanciando o objeto conectar da classe SqlCOnnection para conectar ou banco de dados
-            SqlConnection conectar = new SqlConnection("Data Source=DESKTOP-I1M48RU\\SQLEXPRESS;Initial Catalog=HotelVallhala;Integrated Security=True");
-
-            try
+            else
             {
-
-                //Instanciando o objeto c da classe SqlCommand que ira escrever um comando sql(inserto, select e etc)
-                SqlCommand c = new SqlCommand("INSERT INTO info_hotel(uf_hotel, cidade_hotel, rua_hotel, numero_hotel, bairro_hotel, telefone, cpf_responsavel) VALUES(@uf, @cidade, @rua, @numero, @bairro, @telefone, @cpf)", conectar);
-
-                //Insere os dados da text box no comando sql
-                c.Parameters.Add(new SqlParameter("@uf", this.mtxtUf.Text));
-                c.Parameters.Add(new SqlParameter("@cidade", this.mtxtCidade.Text));
-                c.Parameters.Add(new SqlParameter("@rua", this.mtxtRua.Text));
-                c.Parameters.Add(new SqlParameter("@numero", this.mtxtNumero.Text));
-                c.Parameters.Add(new SqlParameter("@bairro", this.mtxtCpf.Text));
-                c.Parameters.Add(new SqlParameter("@telefone", this.mtxtTelefone.Text));
-                c.Parameters.Add(new SqlParameter("@cpf", this.mtxtCpf.Text));
-
-                //Conectar ao banco
-                conectar.Open();
-
-                //Comando para executar o INSERT
-                c.ExecuteNonQuery();
-
-                //Fecha a conecxão com o banco
-                conectar.Close();
-
-                MessageBox.Show("Enviado com sucesso");
-
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Ocorreu o erro" + ex);
-            }
-            finally
-            {
-                conectar.Close();
+                MessageBox.Show(controle.mensagem);
             }
 
         }

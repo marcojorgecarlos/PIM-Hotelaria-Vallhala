@@ -13,6 +13,7 @@ namespace PIMIII
 
         public bool vrCpf = false;
         public bool vrCadastro = false;
+        public String mensagem = "";
 
         public bool cadastrarHotel(String cpfGerente, String uf, String cidade, String rua, String numero, String bairro, String telefone)
         {
@@ -21,73 +22,79 @@ namespace PIMIII
             return vrCadastro;
         }
 
-        public int validarNumero(string txt_Numero)
+        public void validarNumero(string txt_Numero)
         {
             if (txt_Numero.Length == 0)
             {
-                return 0;
+                mensagem = "Erro o número do hotel está inválido";
             }
             else
             {
-                return 1;
+                mensagem = "";
             }
+            
         }
 
-        public int validarTelefone(string txt_Telefone)
+        public void validarTelefone(string txt_Telefone)
         {
-            if(txt_Telefone.Length <= 10)
+            if(txt_Telefone.Length != 11)
             {
-                return 0;
+                mensagem = "Erro o telefone do hotel está inválido";
+                
             }
             else
             {
-                return 1;
+                mensagem = "";
             }
+           
         }
 
-        public int validarCidade(string txt_Cidade)
+        public void validarCidade(string txt_Cidade)
         {
             if (txt_Cidade.Length <= 2)
             {
-                return 0;
+                mensagem = "Erro a cidade do hotel está inválida";
             }
             else
             {
-                return 1;
+                mensagem = "";
             }
+            
         }
 
-        public int validarBairro(string txt_bairro)
+        public void validarBairro(string txt_bairro)
         {
             if(txt_bairro.Length <= 4)
             {
-                return 0;
+                mensagem = "Erro o bairro do hotel está inválido";
             }
             else
             {
-                return 1;
+                mensagem = "";
             }
+            
         }
 
-        public int validarRua(string txt_rua)
+        public void validarRua(string txt_rua)
         {
             if(txt_rua.Length <= 4)
             {
-                return 0;
+                mensagem = "Erro a rua do hotel está inválida";
             }
             else
             {
-                return 1;
+                mensagem = "";
             }
+            
         }
 
-        public int validarUf(string txt_uf)
+        public void validarUf(string txt_uf)
         {
             string t = txt_uf;
 
             if (t.Length <= 1)
             {
-                return 0;
+                mensagem = "Erro o uf do hotel está inválido";
             }
             
 
@@ -96,12 +103,12 @@ namespace PIMIII
                  || t == "MG" || t == "ES" || t == "RJ" || t == "SP" || t == "SC" || t == "PR" || t == "RS" || t == "MS"
                   || t == "MT" || t == "Go" || t == "DF")
             {
-                
-                return 1;
+
+                mensagem = "";
             }
             else
             {
-                return 2;
+                mensagem = "Erro o uf do hotel está inválido";
             }
         }
 
@@ -115,6 +122,7 @@ namespace PIMIII
 
             if(text.Length <= 10)
             {
+                mensagem = "Erro cpf inválido";
                 return vrCpf;
             }
 
@@ -179,17 +187,19 @@ namespace PIMIII
             {
                 if (cpf[10] == digito[1])
                 {
-                    vrCpf = true;
+                    mensagem = "";
                     return vrCpf;
                 }
                 else
                 {
+                    mensagem = "Erro cpf inválido";
                     return vrCpf;
                 }
 
             }
             else
             {
+                mensagem = "Erro cpf inválido";
                 return vrCpf;
             }
 

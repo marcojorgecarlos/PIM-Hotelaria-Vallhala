@@ -131,6 +131,7 @@ namespace PIMIII
             this.mtxtTelefone.Name = "mtxtTelefone";
             this.mtxtTelefone.Size = new System.Drawing.Size(88, 20);
             this.mtxtTelefone.TabIndex = 51;
+            this.mtxtTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // mtxtRua
             // 
