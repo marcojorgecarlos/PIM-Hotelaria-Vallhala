@@ -43,7 +43,10 @@ namespace PIMIII.classes
 
         public bool inserirHotel (String cpfGerente, String uf, String cidade, String rua, String numero, String bairro, String telefone)
         {
+            //Atribui qual será o comando que será executado no banco de dados para inserir as informações
             cmd.CommandText = "insert into info_hotel(uf_hotel, cidade_hotel, rua_hotel, numero_hotel, bairro_hotel, telefone, cpf_responsavel) VALUES(@uf, @cidade, @rua, @numero, @bairro, @telefone, @cpf)";
+
+            //Atribui o valor dos campos que estão com @
             cmd.Parameters.AddWithValue("@uf", uf);
             cmd.Parameters.AddWithValue("@cidade", cidade);
             cmd.Parameters.AddWithValue("@rua", rua);
@@ -54,12 +57,17 @@ namespace PIMIII.classes
 
             try
             {
-
+                //Conecta no banco de dados
                 cmd.Connection = con.Conectar();
+
+                //Executa o comando
                 cmd.ExecuteNonQuery();
+
+                //Desconecta do banco de dados
                 con.desconectar();
                 validacao = true;
             }
+            //Caso não consiga conectar ou inserir irá mostrar a mensagem junto com o errdo do sql
             catch(SqlException ex)
             {
                 this.mensagem = "Erro com banco de dados" + ex;

@@ -22,7 +22,9 @@ namespace PIMIII
             return vrCadastro;
         }
 
-        public void validarNumero(string txt_Numero)
+        //Métodos para validar cada campo do cadastro
+
+        public void validarNumero(String txt_Numero)
         {
             if (txt_Numero.Length == 0)
             {
@@ -35,7 +37,7 @@ namespace PIMIII
             
         }
 
-        public void validarTelefone(string txt_Telefone)
+        public void validarTelefone(String txt_Telefone)
         {
             if(txt_Telefone.Length != 11)
             {
@@ -49,7 +51,7 @@ namespace PIMIII
            
         }
 
-        public void validarCidade(string txt_Cidade)
+        public void validarCidade(String txt_Cidade)
         {
             if (txt_Cidade.Length <= 2)
             {
@@ -62,7 +64,7 @@ namespace PIMIII
             
         }
 
-        public void validarBairro(string txt_bairro)
+        public void validarBairro(String txt_bairro)
         {
             if(txt_bairro.Length <= 4)
             {
@@ -75,7 +77,7 @@ namespace PIMIII
             
         }
 
-        public void validarRua(string txt_rua)
+        public void validarRua(String txt_rua)
         {
             if(txt_rua.Length <= 4)
             {
@@ -88,7 +90,7 @@ namespace PIMIII
             
         }
 
-        public void validarUf(string txt_uf)
+        public void validarUf(String txt_uf)
         {
             string t = txt_uf;
 

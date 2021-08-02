@@ -21,13 +21,16 @@ namespace PIMIII
 
         private void bntEnviar_Click(object sender, EventArgs e)
         {
+            
             Controle controle = new Controle();
             ComandoSql cadastrarhotel = new ComandoSql();
+            //Chama o método validar hotel da classe Controle para verificar se todos os campos do cadastro estão válidos
             controle.validarHotel(mtxtCpf.Text, mtxtUf.Text, mtxtCidade.Text, mtxtRua.Text, mtxtNumero.Text, mtxtBairro.Text, mtxtTelefone.Text);
 
+            //Verifica se todos os campos estão válidos, se sim irá executar o método para inserir as informações no banco
             if (controle.mensagem.Equals(""))
             {
-                
+                //Inicia o método inserirHotel da classe comandosql e caso retorne true significa que inseriu todos os dados dentro do banco
                 if (cadastrarhotel.inserirHotel(mtxtCpf.Text, mtxtUf.Text, mtxtCidade.Text, mtxtRua.Text, mtxtNumero.Text, mtxtBairro.Text, mtxtTelefone.Text))
                 {
                     MessageBox.Show("Hotel Cadastrado com sucesso");

@@ -28,6 +28,11 @@ namespace PIMIII.classes
         {
             Hotel verificacao = new Hotel();
 
+            /*Chama cada método da classe hotel para verificar se cada campo do cadastro está válido, caso o campo naõ esteja é adicionado a variável
+             * mensagem da classe hotel o nome do erro, ao fim da execução do método é verificado se a mensagem está vazia, se sim segue com o programa
+             * se não é mostrada a mensagem de erro e interrompe a execução do programa
+            */
+
             verificacao.validarTelefone(telefone);
             if (!verificacao.mensagem.Equals(""))
             {
