@@ -9,7 +9,7 @@ namespace PIMIII.classes
 {
     class ComandoSql
     {
-        public bool tem = false;
+        public bool validacao = false;
         public String mensagem = "";
         SqlCommand cmd = new SqlCommand();
         Conexao con = new Conexao();
@@ -26,16 +26,45 @@ namespace PIMIII.classes
                 dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
-                    tem = true;
+                    validacao = true;
+                }
+                else
+                {
+                    validacao = false;
                 }
             }
             catch (SqlException)
             {
                 this.mensagem = "Erro com Banco de Dados!";
             }
-            return tem;
+            return validacao;
         }
 
-        
+        public bool inserirHotel (String cpfGerente, String uf, String cidade, String rua, String numero, String bairro, String telefone)
+        {
+            cmd.CommandText = "insert into info_hotel(uf_hotel, cidade_hotel, rua_hotel, numero_hotel, bairro_hotel, telefone, cpf_responsavel) VALUES(@uf, @cidade, @rua, @numero, @bairro, @telefone, @cpf)";
+            cmd.Parameters.AddWithValue("@uf", uf);
+            cmd.Parameters.AddWithValue("@cidade", cidade);
+            cmd.Parameters.AddWithValue("@rua", rua);
+            cmd.Parameters.AddWithValue("@numero", numero);
+            cmd.Parameters.AddWithValue("@bairro", bairro);
+            cmd.Parameters.AddWithValue("@telefone", telefone);
+            cmd.Parameters.AddWithValue("cpf", cpfGerente);
+
+            try
+            {
+
+                con.Conectar();
+                cmd.ExecuteNonQuery();
+                con.desconectar();
+                validacao = true;
+            }
+            catch(SqlException ex)
+            {
+                this.mensagem = "Erro com banco de dados" + ex;
+                validacao = false;
+            }
+            return validacao;
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PIMIII.classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -11,6 +12,14 @@ namespace PIMIII
     {
 
         public bool vrCpf = false;
+        public bool vrCadastro = false;
+
+        public bool cadastrarHotel(String cpfGerente, String uf, String cidade, String rua, String numero, String bairro, String telefone)
+        {
+            ComandoSql comando = new ComandoSql();
+            
+            return vrCadastro;
+        }
 
         public int validarNumero(string txt_Numero)
         {

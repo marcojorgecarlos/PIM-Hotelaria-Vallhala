@@ -11,14 +11,14 @@ namespace PIMIII.classes
         public bool vrLogin;
         public bool vrCpf;
         public String mensagem = "";
+        ComandoSql comandosql = new ComandoSql();
 
         public bool controleLogin(String Login, String Senha)
         {
-            ComandoSql comando = new ComandoSql();
-            vrLogin = comando.pesquisarLogin(Login, Senha);
-            if (!comando.mensagem.Equals(""))
+            vrLogin = comandosql.pesquisarLogin(Login, Senha);
+            if (!comandosql.mensagem.Equals(""))
             {
-                this.mensagem = comando.mensagem;
+                this.mensagem = comandosql.mensagem;
             }
             return vrLogin;
         }
@@ -27,6 +27,10 @@ namespace PIMIII.classes
         {
             Hotel verificacao = new Hotel();
             vrCpf = verificacao.validarCpf(cpf);
+            if (!comandosql.mensagem.Equals(""))
+            {
+                this.mensagem = comandosql.mensagem;
+            }
             return vrCpf;
         }
     }
