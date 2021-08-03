@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FEQnCuhyyWiCWB0vFd+FWHHHVWGOBTBKEoBOtBt/HkWYSnvGuho71ZwR0qJdHtZX7gIU3OHZJnbAgnPzQR4uHg==",
+  "dgSpecHash": "5AX9LDF9BzAKc0fLDBAmyaGUSJqOtnQTC79qK+73l/e0oO+SDjy8UUy/Jjd4AmMyYsWdbRxB0MP3OdD+jfRZjw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Fubuk\\PIM-Hotelaria-Vallhala\\Telas cadastro de clientes\\Software Rede Hotelaria\\Software Rede Hotelaria.csproj",
+  "projectFilePath": "C:\\Users\\Fubuk\\PIM-Hotelaria-Vallhala\\Cpf verificado\\Software Rede Hotelaria\\Software Rede Hotelaria.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Fubuk\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Fubuk\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

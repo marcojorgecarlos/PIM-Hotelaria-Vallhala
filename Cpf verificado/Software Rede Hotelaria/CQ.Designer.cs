@@ -36,13 +36,13 @@ namespace Software_Rede_Hotelaria
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.TxtFg = new System.Windows.Forms.TextBox();
+            this.TxtId = new System.Windows.Forms.TextBox();
+            this.TxtTipo = new System.Windows.Forms.TextBox();
+            this.TxtAndar = new System.Windows.Forms.TextBox();
+            this.TxtNmr = new System.Windows.Forms.TextBox();
+            this.TxtLim = new System.Windows.Forms.TextBox();
+            this.TxtVal = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -112,54 +112,55 @@ namespace Software_Rede_Hotelaria
             this.label7.TabIndex = 6;
             this.label7.Text = "FG_Reservado: ";
             // 
-            // textBox1
+            // TxtFg
             // 
-            this.textBox1.Location = new System.Drawing.Point(199, 99);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(455, 23);
-            this.textBox1.TabIndex = 7;
+            this.TxtFg.Location = new System.Drawing.Point(199, 99);
+            this.TxtFg.Name = "TxtFg";
+            this.TxtFg.Size = new System.Drawing.Size(455, 23);
+            this.TxtFg.TabIndex = 7;
+            this.TxtFg.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // TxtId
             // 
-            this.textBox2.Location = new System.Drawing.Point(197, 132);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(455, 23);
-            this.textBox2.TabIndex = 8;
+            this.TxtId.Location = new System.Drawing.Point(197, 132);
+            this.TxtId.Name = "TxtId";
+            this.TxtId.Size = new System.Drawing.Size(455, 23);
+            this.TxtId.TabIndex = 8;
             // 
-            // textBox3
+            // TxtTipo
             // 
-            this.textBox3.Location = new System.Drawing.Point(197, 173);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(455, 23);
-            this.textBox3.TabIndex = 9;
+            this.TxtTipo.Location = new System.Drawing.Point(197, 173);
+            this.TxtTipo.Name = "TxtTipo";
+            this.TxtTipo.Size = new System.Drawing.Size(455, 23);
+            this.TxtTipo.TabIndex = 9;
             // 
-            // textBox4
+            // TxtAndar
             // 
-            this.textBox4.Location = new System.Drawing.Point(199, 208);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(455, 23);
-            this.textBox4.TabIndex = 10;
+            this.TxtAndar.Location = new System.Drawing.Point(199, 208);
+            this.TxtAndar.Name = "TxtAndar";
+            this.TxtAndar.Size = new System.Drawing.Size(455, 23);
+            this.TxtAndar.TabIndex = 10;
             // 
-            // textBox5
+            // TxtNmr
             // 
-            this.textBox5.Location = new System.Drawing.Point(199, 245);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(455, 23);
-            this.textBox5.TabIndex = 11;
+            this.TxtNmr.Location = new System.Drawing.Point(199, 245);
+            this.TxtNmr.Name = "TxtNmr";
+            this.TxtNmr.Size = new System.Drawing.Size(455, 23);
+            this.TxtNmr.TabIndex = 11;
             // 
-            // textBox6
+            // TxtLim
             // 
-            this.textBox6.Location = new System.Drawing.Point(199, 283);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(455, 23);
-            this.textBox6.TabIndex = 12;
+            this.TxtLim.Location = new System.Drawing.Point(199, 283);
+            this.TxtLim.Name = "TxtLim";
+            this.TxtLim.Size = new System.Drawing.Size(455, 23);
+            this.TxtLim.TabIndex = 12;
             // 
-            // textBox7
+            // TxtVal
             // 
-            this.textBox7.Location = new System.Drawing.Point(199, 322);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(455, 23);
-            this.textBox7.TabIndex = 13;
+            this.TxtVal.Location = new System.Drawing.Point(199, 322);
+            this.TxtVal.Name = "TxtVal";
+            this.TxtVal.Size = new System.Drawing.Size(455, 23);
+            this.TxtVal.TabIndex = 13;
             // 
             // button1
             // 
@@ -199,13 +200,13 @@ namespace Software_Rede_Hotelaria
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtVal);
+            this.Controls.Add(this.TxtLim);
+            this.Controls.Add(this.TxtNmr);
+            this.Controls.Add(this.TxtAndar);
+            this.Controls.Add(this.TxtTipo);
+            this.Controls.Add(this.TxtId);
+            this.Controls.Add(this.TxtFg);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -243,5 +244,12 @@ namespace Software_Rede_Hotelaria
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox TxtFg;
+        private System.Windows.Forms.TextBox TxtId;
+        private System.Windows.Forms.TextBox TxtTipo;
+        private System.Windows.Forms.TextBox TxtAndar;
+        private System.Windows.Forms.TextBox TxtNmr;
+        private System.Windows.Forms.TextBox TxtLim;
+        private System.Windows.Forms.TextBox TxtVal;
     }
 }
